@@ -33,28 +33,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
   
-    .state('app.events', {
-      url: '/events',
+    .state('app.agences', {
+      url: '/agences',
       views: {
         'menuContent': {
-          templateUrl: 'templates/events.html',
-          controller: 'EventsCtrl'
+          templateUrl: 'templates/agences.html',
+          controller: 'agencesCtrl'
         }
       }
-    })
+    });
 
-  .state('app.event', {
-    url: '/event/:eventId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/event.html',
-        controller: 'EventCtrl'
-
-      }
-    }
-  });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/events');
+  $urlRouterProvider.otherwise('/app/agences');
 });
