@@ -1,9 +1,8 @@
-<ion-view view-title="Events">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="agence in agences">
-        {{agence["ZTE COPORATION"]}}
-      </ion-item>
-    </ion-list>
+<ion-view view-title="Liste des agences PM">
+  <ion-content data-tap-disabled='true'>
+     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-marker ng-repeat="m in myMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+ 	</ui-gmap-google-map>
+    
   </ion-content>
 </ion-view>
