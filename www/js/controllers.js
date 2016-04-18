@@ -11,10 +11,10 @@ angular.module('starter.controllers', [])
 var prefixApi ='';
 
 if(window.cordova){
-  prefixApi = 'http://demo.ckan.org';
+  prefixApi = 'http://ckan-demo.ckan.io';
 }
 
-  $http.get( prefixApi + '/api/action/datastore_search?resource_id=9079d1fd-2425-4a31-9557-0b056146ff28').then(function(response){
+  $http.get( prefixApi + '/api/action/datastore_search?resource_id=3615a911-1915-45fc-a501-ede483e4b0c7').then(function(response){
             
             $scope.agences = response.data.result.records;
             $scope.myMarkers = extractMarkersFromData(response.data.result.records);
@@ -46,4 +46,56 @@ if(window.cordova){
     return allMarkers;
   }
 
-});
+
+
+
+})
+
+.controller('geocodingCtrl', function($scope, $http) {
+
+    $scope.maptest = { center: { latitude: 33.5910948, longitude: -7.6137281 }, zoom: 5 };
+
+
+  $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=hopital+sidi+lahcen&key=AIzaSyBMdX7l4r4JLMR0HSxfW3xfAUBt_pWoMUc')
+      .then(function(response){
+            
+            $scope.geocode = response.data.results;
+            $scope.geometry = response.data.results[0].geometry.location;
+            // console.log($scope.geometry);
+            $scope.myGeoMarkers = extractMyGeoMarkersFromData($scope.geometry);
+
+  });
+
+
+ // function getCoordOfAdressFromGmap(adress, callback){
+ //    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + adress + ',+CA&key=AIzaSyBMdX7l4r4JLMR0HSxfW3xfAUBt_pWoMUc')
+ //    .then(function(){
+ //      // ...
+
+ //      callback(data)
+ //    })
+
+ // }
+
+
+ // getCoordOfAdressFromGmap('poste rabat', function(data){
+
+ // })
+
+
+  // function extractMyGeoMarkersFromData(data){
+  //   var allMyGeoMarkers = [];
+
+  //   var marker = {
+  //     id:"2",
+  //     coord:{
+  //       longitude: $scope.geometry.lng,
+  //       latitude:$scope.geometry.lat
+  //     }
+  //   };
+  //   allMyGeoMarkers.push(marker);
+  //   return allMyGeoMarkers;
+  // }
+
+
+})

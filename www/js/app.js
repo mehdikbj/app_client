@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'uiGmapgoogle-maps'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps'])
 
 
 
@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'uiGmapgoogle-maps'])
         'menuContent': {
           templateUrl: 'templates/agences.html',
           controller: 'agencesCtrl'
+        }
+      }
+    })
+
+     .state('app.event', {
+      url: '/event',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/event.html',
+          controller: 'hopiCtrl'
         }
       }
     });

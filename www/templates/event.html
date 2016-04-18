@@ -1,31 +1,21 @@
-<ion-view view-title="Geolocalisation">
-  <ion-content>
-    <h1>Geolocalisation</h1>
-<!-- 
-    <div class="mainContainer" data-ng-app="RavensApp">
-		<h1>Baltimore Ravens</h1>
+<!-- <ion-view view-title="Geolocalisation">
+  <ion-content data-tap-disabled='true'>
+     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+        <ui-gmap-marker ng-repeat="m in myGeoMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+ 	</ui-gmap-google-map>
+    
+  </ion-content> -->
 
-		<input type="text" data-ng-model="search.$">
+<!--   <div id="map"></div>
+</ion-view> -->
 
-		<div data-ng-controller="ravensCtrl">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Player</th>
-						<th>Position</th>
-						<th>Number</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-ng-repeat="player in players | filter:search | orderBy:'name' | limitTo: 3">
-						<td>{{player.name}}</td>
-						<td>{{player.position}}</td>
-						<td>{{player.number}}</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div> -->
+
+<ion-view view-title="Liste des hopitaux">
+  <ion-content data-tap-disabled='true'>
+     <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker ng-repeat="m in myMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+ 	</ui-gmap-google-map>
+    
   </ion-content>
 </ion-view>
 
@@ -43,32 +33,4 @@
 
 
 
-
-
-
-<!-- 
-	<div class="mainContainer" data-ng-app="RavensApp">
-		<h1>Baltimore Ravens</h1>
-
-		<input type="text" data-ng-model="search.$">
-
-		<div data-ng-controller="ravensCtrl">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Player</th>
-						<th>Position</th>
-						<th>Number</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-ng-repeat="player in players | filter:search | orderBy:'name' | limitTo: 3">
-						<td>{{player.name}}</td>
-						<td>{{player.position}}</td>
-						<td>{{player.number}}</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div> -->
 
