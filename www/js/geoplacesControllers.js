@@ -2,6 +2,7 @@ angular.module('starter.geoplacesControllers', [])
 
   .controller('hopiCtrl', function ($scope, $http) {
     var map;
+    $scope.allMarker = [];
 
     $scope.mapConfig = {
       center: {
@@ -18,6 +19,8 @@ angular.module('starter.geoplacesControllers', [])
       //*
       // Create a map centered in Pyrmont, Sydney (Australia).
       map = $scope.mapConfig.control.getGMap();
+      var GMapService = new google.maps.places.PlacesService(map);
+
 
       var prefixApi = '';
       var hopitalNom = '';
@@ -27,47 +30,76 @@ angular.module('starter.geoplacesControllers', [])
       }
 
       $http.get(prefixApi + '/api/action/datastore_search?resource_id=8efb414e-e06b-4279-88ad-952a4ea02d5d&limit=380').then(function (response) {
-        for (i = 0; i < 360; i++) {
-          $scope.agences = response.data.result.records;
-          $scope.hopital_nom = response.data.result.records[i]["Nom de l'hôpital"];
-          $scope.hopital_ville = response.data.result.records[i]["ville /commue d'implantation de l'hôpital"];
-          // console.log($scope.hopital_nom);
-          hopitalNom = $scope.hopital_nom;
-          hopitalVille = $scope.hopital_ville;
-          //console.log(hopitalVille);
-          // $scope.myMarkers = extractMarkersFromData(response.data.result.records);
+        // search for hospital and town position by Name
+        var extractedData = extractHospitalAndTownFromResult(response.data.result.records);
+        //console.log(extractedData);
+        var from = 0, to = 10;
+        var pagePositions = getPositionsForData(from, to, extractedData);
 
 
-          // Search for Google's office in Australia.
-          var request = {
-            location: map.getCenter(),
-            radius: '10000',
-            query: 'hopital' + hopitalNom + hopitalVille,
-          };
-
-          var service = new google.maps.places.PlacesService(map);
-          service.textSearch(request, callback);
+        //showMarkersForPage(pagePositions);
 
 
-        }
+        // show the result in gmap
+
+
 
       });
-// Checks that the PlacesServiceStatus is OK, and adds a marker
-// using the place ID and location from the PlacesService.
-      function callback(results, status) {
-        // console.log(results);
-        // console.log(results[0].geometry.location.lat());
-        // console.log(results[0].geometry.location.lng());
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          var marker = new google.maps.Marker({
-            map: map,
-            place: {
-              placeId: results[0].place_id,
-              location: results[0].geometry.location
-            }
+
+      function extractHospitalAndTownFromResult(records){
+        var extractedData = [];
+        for(var i = 0, max = records.length; i < max ; i++){
+          // push the hospital and town for this item
+
+          var item = records[i];
+
+          extractedData.push({
+            hospital: item["Nom de l'hôpital"],
+            town: item["ville /commue d'implantation de l'hôpital"]
           });
+
+        }
+
+        return extractedData;
+      }
+
+      function getPositionsForData(from, to, extractedData){
+        var allMarker = [];
+        var marker = {
+          id:"",
+          coord:{
+            longitude: "",
+            latitude:""
+          }
+        }
+        for (var i= from ; i <to ; i++) {
+
+          var item = extractedData[i];
+          var request = {
+            location: map.getCenter(),
+            radius: '500',
+            query: 'hopital' + item.hospital + ' ' + item.town
+          };
+          //*/
+
+          GMapService.textSearch(request, function (results, status) {
+            console.log(results);
+            var marker = {
+              id: results[0].id,
+              coord: {
+                longitude: results[0].geometry.location.lng(),
+                latitude: results[0].geometry.location.lat()
+              }
+            };
+            $scope.allMarker.push(marker);
+            //console.log($scope.allMarker);
+          });
+
+
         }
       }
+
+
 
       //*/
 

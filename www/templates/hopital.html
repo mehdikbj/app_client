@@ -3,7 +3,7 @@
      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
         <ui-gmap-marker ng-repeat="m in myGeoMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
  	</ui-gmap-google-map>
-    
+
   </ion-content> -->
 
 <!--   <div id="map"></div>
@@ -13,9 +13,9 @@
 <ion-view view-title="Liste des hopitaux">
   <ion-content data-tap-disabled='true'>
      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
-        <ui-gmap-marker ng-repeat="m in myMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+        <ui-gmap-marker ng-repeat="m in allMarker" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
  	</ui-gmap-google-map>
-    
+
   </ion-content>
 </ion-view>
 

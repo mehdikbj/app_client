@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers' ])
 
 
 
@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.geoController
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-  
+
     .state('app.agences', {
       url: '/agences',
       views: {
@@ -44,12 +44,21 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.geoController
       }
     })
 
-     .state('app.event', {
-      url: '/event',
+     .state('app.hopital', {
+      url: '/hopital',
       views: {
         'menuContent': {
-          templateUrl: 'templates/event.html',
+          templateUrl: 'templates/hopital.html',
           controller: 'hopiCtrl'
+        }
+      }
+    })
+    .state('app.chart', {
+      url: '/chart',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/chart.html',
+          controller: 'chartCtrl'
         }
       }
     });
