@@ -2,3 +2,7 @@
 .angular-google-map-container {
     height:700px;
  }
+
+.body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}

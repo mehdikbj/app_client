@@ -1,0 +1,21 @@
+<ion-view view-title="Liste des Ecoles">
+
+<ion-content>
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper" name="ecole">
+      <input ng-model= "searchTxt"  type="text" placeholder="Search">
+    </label>
+    <button  class="button button-small" ng-click="doSearch(searchTxt)">
+      Submit
+    </button>
+  </div>
+  <ion-list>
+    <ion-item ng-repeat="item in items"  item="item" href="#/app/detailEcole/{{item._id}}" class="item-remove-animate">
+      <h3>{{ item._id }}-
+      {{ item.NOM_ETABL }}</h3>
+      <p>{{ item.Ville }} </p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-view>
+

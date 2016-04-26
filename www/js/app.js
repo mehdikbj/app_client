@@ -3,8 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
+
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listItemController' ])
 
 
 
@@ -53,6 +54,27 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         }
       }
     })
+
+    .state('app.listEcole', {
+      url: '/listEcole',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/listEcole.html',
+          controller: 'listItemCtrl'
+        }
+      }
+    })
+
+    .state('app.listEcoleDetail', {
+      url: '/detailEcole/:ecoleId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/detailEcole.html',
+          controller: 'EcoleDetailCtrl'
+        }
+      }
+    })
+
     .state('app.chart', {
       url: '/chart',
       views: {
