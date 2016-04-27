@@ -7,8 +7,13 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"8d3a66f8-1ea4-426d-8ada-ca5c12612ba4"%20WHERE%20_id%20=%20'+Id);
       },
 
-      getDataByUrl: function (url) {
-        return CkanHttp.get( url);
+      searchSchool: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
+      },
+
+      searchAgencies: function () {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=3615a911-1915-45fc-a501-ede483e4b0c7');
+
       }
 
 

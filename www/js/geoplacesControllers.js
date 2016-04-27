@@ -16,8 +16,6 @@ angular.module('starter.geoplacesControllers', [])
 
     function initialize() {
 
-      //*
-      // Create a map centered in Pyrmont, Sydney (Australia).
       map = $scope.mapConfig.control.getGMap();
       var GMapService = new google.maps.places.PlacesService(map);
 
@@ -27,9 +25,7 @@ angular.module('starter.geoplacesControllers', [])
         var extractedData = extractHospitalAndTownFromResult(response.data.result.records);
         var from = 0, to = 10;
         $scope.allMarker = getPositionsForData(from, to, extractedData);
-
-
-
+        
       });
 
       function extractHospitalAndTownFromResult(records){
@@ -78,11 +74,6 @@ angular.module('starter.geoplacesControllers', [])
         }
         return  allMarker;
       }
-
-
-
-      //*/
-
 
     }
 

@@ -8,10 +8,9 @@ angular.module('starter.controllers', [])
     $scope.map = { center: { latitude: 33.5910948, longitude: -7.6137281 }, zoom: 5 };
     $scope.agences=[];
 
-    SchoolService.getDataByUrl('/api/action/datastore_search?resource_id=3615a911-1915-45fc-a501-ede483e4b0c7').then(function(response){
-
-    $scope.agences = response.data.result.records;
-    $scope.myMarkers = extractMarkersFromData(response.data.result.records);
+    SchoolService.searchAgencies().then(function(response){
+      $scope.agences = response.data.result.records;
+      $scope.myMarkers = extractMarkersFromData(response.data.result.records);
     });
 
 
@@ -39,7 +38,10 @@ angular.module('starter.controllers', [])
     }
     return allMarkers;
   }
-  
+
+
+
+
 })
 
 

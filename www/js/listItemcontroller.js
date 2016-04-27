@@ -3,23 +3,13 @@ angular.module('starter.listItemController', [])
 .controller('listItemCtrl', function($scope, $http, SchoolService) {
   $scope.searchTxt='';
 
-  searchSchool('rabat');
 
   $scope.doSearch= function (searchTxt) {
     console.log(searchTxt);
-    searchSchool(searchTxt);
-
-  };
-
-  function searchSchool (search) {
-
     var allItems = [];
-
-    SchoolService.getDataByUrl('/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700').then(function(response){
-
+    SchoolService.searchSchool(searchTxt).then(function(response){
 
       data= response.data.result.records;
-      //console.log(response.data.result.records);
 
       for(var i=0 ;i<data.length ;i++){
         var item = {
@@ -41,11 +31,13 @@ angular.module('starter.listItemController', [])
 
       $scope.items = allItems;
 
-
     });
 
+  };
 
-  }
+  $scope.doSearch('rabat');
+
+
 
 
 
