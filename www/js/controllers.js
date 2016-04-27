@@ -65,37 +65,5 @@ if(window.cordova){
             $scope.myGeoMarkers = extractMyGeoMarkersFromData($scope.geometry);
 
   });
-
-
- // function getCoordOfAdressFromGmap(adress, callback){
- //    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + adress + ',+CA&key=AIzaSyBMdX7l4r4JLMR0HSxfW3xfAUBt_pWoMUc')
- //    .then(function(){
- //      // ...
-
- //      callback(data)
- //    })
-
- // }
-
-
- // getCoordOfAdressFromGmap('poste rabat', function(data){
-
- // })
-
-
-  // function extractMyGeoMarkersFromData(data){
-  //   var allMyGeoMarkers = [];
-
-  //   var marker = {
-  //     id:"2",
-  //     coord:{
-  //       longitude: $scope.geometry.lng,
-  //       latitude:$scope.geometry.lat
-  //     }
-  //   };
-  //   allMyGeoMarkers.push(marker);
-  //   return allMyGeoMarkers;
-  // }
-
-
+  
 })

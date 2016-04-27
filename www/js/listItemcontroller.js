@@ -52,8 +52,54 @@ angular.module('starter.listItemController', [])
 
 })
 
-.controller('EcoleDetailCtrl',  function($scope, $http, $stateParams){
+.controller('EcoleDetailCtrl',  function($scope, $http, $stateParams, SchoolService){
+  var map;
+  $scope.allMarkerEcole = [];
 
-  $scope.ecoleId = $stateParams.ecoleId;
-  console.log($stateParams);
-})
+  $scope.mapConfig = {
+    center: {
+      latitude: 33.5910948,
+      longitude: -7.6137281
+    },
+    zoom: 5,
+    control: {}
+  };
+
+
+  SchoolService.getDataById($stateParams.ecoleId).then(function(response){
+    $scope.ecole= response.data.result.records[0];
+    console.log($scope.ecole);
+  });
+
+  function  initialize () {
+    var allMarkerEcole = [];
+    map = $scope.mapConfig.control.getGMap();
+    var GMapService = new google.maps.places.PlacesService(map);
+
+    var request = {
+      location: map.getCenter(),
+      radius: '500',
+      query: 'Google Sydney'
+    };
+
+    GMapService.textSearch(request, function (results, status){
+      var marker = {
+        id: results[0].id,
+        coord: {
+          longitude: results[0].geometry.location.lng(),
+          latitude: results[0].geometry.location.lat()
+        }
+      };
+      allMarkerEcole.push(marker);
+      // console.log(allMarkerEcole);
+
+    })
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+});

@@ -1,0 +1,96 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-route@X.Y.Z' ]
+2 info using npm@3.8.6
+3 info using node@v4.4.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData angular-route@X.Y.Z
+8 silly fetchNamedPackageData angular-route
+9 silly mapToRegistry name angular-route
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'angular-route',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'angular-route',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/angular-route
+14 verbose request uri https://registry.npmjs.org/angular-route
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 10:14:06 AM
+17 verbose request id 73e010faec518169
+18 verbose etag "9G12HEWB084YFCSADV7GMIW1S"
+19 http request GET https://registry.npmjs.org/angular-route
+20 http 304 https://registry.npmjs.org/angular-route
+21 verbose headers { date: 'Tue, 26 Apr 2016 09:14:06 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"9G12HEWB084YFCSADV7GMIW1S"',
+21 verbose headers   age: '63',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1461662046.649198,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Tue, 26 Apr 2016 09:14:06 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"9G12HEWB084YFCSADV7GMIW1S"',
+22 silly get     age: '63',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-fra1246-FRA',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1461662046.649198,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/angular-route from cache
+24 verbose get saving angular-route to /Users/mehdikabbaj/.npm/registry.npmjs.org/angular-route/.cache.json
+25 verbose correctMkdir /Users/mehdikabbaj/.npm correctMkdir not in flight; initializing
+26 silly fetchPackageMetaData Error: No compatible version found: angular-route@X.Y.Z
+26 silly fetchPackageMetaData Valid install targets:
+26 silly fetchPackageMetaData 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+26 silly fetchPackageMetaData
+26 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+26 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+26 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+26 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+26 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+26 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+26 silly fetchPackageMetaData  error for angular-route@X.Y.Z [Error: No compatible version found: angular-route@X.Y.Z
+26 silly fetchPackageMetaData Valid install targets:
+26 silly fetchPackageMetaData 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+26 silly fetchPackageMetaData ]
+27 silly rollbackFailedOptional Starting
+28 silly rollbackFailedOptional Finishing
+29 silly runTopLevelLifecycles Starting
+30 silly runTopLevelLifecycles Finishing
+31 silly install printInstalled
+32 verbose stack Error: No compatible version found: angular-route@X.Y.Z
+32 verbose stack Valid install targets:
+32 verbose stack 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+32 verbose stack
+32 verbose stack     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+32 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+32 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+32 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+32 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+32 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+33 verbose cwd /Users/mehdikabbaj/OpenApp
+34 error Darwin 14.1.0
+35 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "angular-route@X.Y.Z"
+36 error node v4.4.3
+37 error npm  v3.8.6
+38 error No compatible version found: angular-route@X.Y.Z
+38 error Valid install targets:
+38 error 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+39 error If you need help, you may report this error at:
+39 error     <https://github.com/npm/npm/issues>
+40 verbose exit [ 1, true ]

@@ -34,7 +34,7 @@ angular.module('starter.geoplacesControllers', [])
         var extractedData = extractHospitalAndTownFromResult(response.data.result.records);
         //console.log(extractedData);
         var from = 0, to = 10;
-        var pagePositions = getPositionsForData(from, to, extractedData);
+        $scope.allMarker = getPositionsForData(from, to, extractedData);
 
 
         //showMarkersForPage(pagePositions);
@@ -65,13 +65,6 @@ angular.module('starter.geoplacesControllers', [])
 
       function getPositionsForData(from, to, extractedData){
         var allMarker = [];
-        var marker = {
-          id:"",
-          coord:{
-            longitude: "",
-            latitude:""
-          }
-        }
         for (var i= from ; i <to ; i++) {
 
           var item = extractedData[i];
@@ -83,7 +76,7 @@ angular.module('starter.geoplacesControllers', [])
           //*/
 
           GMapService.textSearch(request, function (results, status) {
-            console.log(results);
+            //console.log(results);
             var marker = {
               id: results[0].id,
               coord: {
@@ -91,12 +84,13 @@ angular.module('starter.geoplacesControllers', [])
                 latitude: results[0].geometry.location.lat()
               }
             };
-            $scope.allMarker.push(marker);
-            //console.log($scope.allMarker);
+            allMarker.push(marker);
+            console.log(allMarker);
           });
 
 
         }
+        return  allMarker;
       }
 
 
