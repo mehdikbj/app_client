@@ -1,6 +1,6 @@
 angular.module('starter.geoplacesControllers', [])
 
-  .controller('hopiCtrl', function ($scope, $http) {
+  .controller('hopiCtrl', function ($scope, $http, SchoolService) {
     var map;
     $scope.allMarker = [];
 
@@ -21,26 +21,12 @@ angular.module('starter.geoplacesControllers', [])
       map = $scope.mapConfig.control.getGMap();
       var GMapService = new google.maps.places.PlacesService(map);
 
-
-      var prefixApi = '';
       var hopitalNom = '';
 
-      if (window.cordova) {
-        prefixApi = 'http://ckan-demo.ckan.io';
-      }
-
-      $http.get(prefixApi + '/api/action/datastore_search?resource_id=8efb414e-e06b-4279-88ad-952a4ea02d5d&limit=380').then(function (response) {
-        // search for hospital and town position by Name
+      SchoolService.getDataByUrl('/api/action/datastore_search?resource_id=8efb414e-e06b-4279-88ad-952a4ea02d5d&limit=380').then(function(response){
         var extractedData = extractHospitalAndTownFromResult(response.data.result.records);
-        //console.log(extractedData);
         var from = 0, to = 10;
         $scope.allMarker = getPositionsForData(from, to, extractedData);
-
-
-        //showMarkersForPage(pagePositions);
-
-
-        // show the result in gmap
 
 
 
@@ -85,7 +71,7 @@ angular.module('starter.geoplacesControllers', [])
               }
             };
             allMarker.push(marker);
-            console.log(allMarker);
+            //console.log(allMarker);
           });
 
 

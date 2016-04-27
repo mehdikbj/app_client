@@ -1,6 +1,6 @@
 angular.module('starter.listItemController', [])
 
-.controller('listItemCtrl', function($scope, $http) {
+.controller('listItemCtrl', function($scope, $http, SchoolService) {
   $scope.searchTxt='';
 
   searchSchool('rabat');
@@ -15,13 +15,8 @@ angular.module('starter.listItemController', [])
 
     var allItems = [];
 
-    var prefixApi ='';
+    SchoolService.getDataByUrl('/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700').then(function(response){
 
-    if(window.cordova){
-      prefixApi = 'http://ckan-demo.ckan.io';
-    }
-
-    $http.get( prefixApi + '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700').then(function(response){
 
       data= response.data.result.records;
       //console.log(response.data.result.records);
@@ -46,9 +41,13 @@ angular.module('starter.listItemController', [])
 
       $scope.items = allItems;
 
+
     });
 
+
   }
+
+
 
 })
 
@@ -76,10 +75,12 @@ angular.module('starter.listItemController', [])
     map = $scope.mapConfig.control.getGMap();
     var GMapService = new google.maps.places.PlacesService(map);
 
+    $scope.allMarkerEcole =  allMarkerEcole;
+
     var request = {
       location: map.getCenter(),
       radius: '500',
-      query: 'Google Sydney'
+      query: 'ecole al bachir '
     };
 
     GMapService.textSearch(request, function (results, status){
