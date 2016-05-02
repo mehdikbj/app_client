@@ -1,0 +1,14 @@
+<ion-view view-title="BTS">
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="bts in btss"  item="cpge" href="#/app/education/detailBts/{{ bts._id }}" class="item-remove-animate">
+        <h3>{{ bts._id }}-
+          {{ bts.Nom }}</h3>
+        <p>{{ bts.Ville }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

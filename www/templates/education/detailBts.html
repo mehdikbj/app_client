@@ -1,0 +1,45 @@
+<ion-view view-title="Detail BTS">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <h3>{{ bts["NOM ETABLISSEMENT"] }}</h3>
+        <p>{{ bts.VILLE }} </p>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        {{ bts.TEL }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-printer"></i>
+        {{ bts.ADRESSE }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-at"></i>
+        {{ bts.EMAIL }}
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker  ng-repeat="m in allMarkerbts" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>

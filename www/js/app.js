@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listItemController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController' ])
 
 
 
@@ -55,25 +55,116 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
       }
     })
 
-    .state('app.listEcole', {
-      url: '/listEcole',
+    .state('app.educationElement', {
+      url: '/education/educationElement',
       views: {
         'menuContent': {
-          templateUrl: 'templates/listEcole.html',
+          templateUrl: 'templates/education/educationElement.html',
+          controller: 'educListCtrl'
+        }
+      }
+    })
+
+    .state('app.listEcole', {
+      url: '/education/listEcole',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/listEcole.html',
           controller: 'listItemCtrl'
         }
       }
     })
 
     .state('app.listEcoleDetail', {
-      url: '/detailEcole/:ecoleId',
+      url: '/education/detailEcole/:ecoleId',
       views: {
         'menuContent': {
-          templateUrl: 'templates/detailEcole.html',
+          templateUrl: 'templates/education/detailEcole.html',
           controller: 'EcoleDetailCtrl'
         }
       }
     })
+    .state('app.detailUniversity', {
+      url: '/education/detailUniversity/:universityId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailUniversity.html',
+          controller: 'universityDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.university', {
+      url: '/education/university',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/university.html',
+          controller: 'listUniversityCtrl'
+        }
+      }
+    })
+
+    .state('app.cpge', {
+      url: '/education/cpge',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/cpge.html',
+          controller: 'cpgeCtrl'
+        }
+      }
+    })
+
+    .state('app.detailCpge', {
+      url: '/education/detailCpge/:cpgeId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailCpge.html',
+          controller: 'cpgeDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.bts', {
+      url: '/education/bts',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/bts.html',
+          controller: 'btsCtrl'
+        }
+      }
+    })
+
+    .state('app.detailBts', {
+      url: '/education/detailBts/:btsId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailBts.html',
+          controller: 'btsDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.institutEcoJurSoc', {
+      url: '/education/institutEcoJurSoc',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/institutEcoJurSoc.html',
+          controller: 'institutEcoJurSocCtrl'
+        }
+      }
+    })
+
+    .state('app.detailInstitutEcoJurSoc', {
+      url: '/education/detailInstitutEcoJurSoc/:institutEcoJurSocId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailInstitutEcoJurSoc.html',
+          controller: 'institutEcoJurSocDetailCtrl'
+        }
+      }
+    })
+
+
 
     .state('app.chart', {
       url: '/chart',

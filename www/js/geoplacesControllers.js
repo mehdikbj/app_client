@@ -1,6 +1,6 @@
 angular.module('starter.geoplacesControllers', [])
 
-  .controller('hopiCtrl', function ($scope, $http, SchoolService) {
+  .controller('hopiCtrl', function ($scope, $http, SearchService) {
     var map;
     $scope.allMarker = [];
 
@@ -21,11 +21,11 @@ angular.module('starter.geoplacesControllers', [])
 
       var hopitalNom = '';
 
-      SchoolService.getDataByUrl('/api/action/datastore_search?resource_id=8efb414e-e06b-4279-88ad-952a4ea02d5d&limit=380').then(function(response){
+      SearchService.searchHospitals().then(function(response){
         var extractedData = extractHospitalAndTownFromResult(response.data.result.records);
         var from = 0, to = 10;
         $scope.allMarker = getPositionsForData(from, to, extractedData);
-        
+
       });
 
       function extractHospitalAndTownFromResult(records){
@@ -58,7 +58,7 @@ angular.module('starter.geoplacesControllers', [])
           //*/
 
           GMapService.textSearch(request, function (results, status) {
-            //console.log(results);
+            console.log(results);
             var marker = {
               id: results[0].id,
               coord: {

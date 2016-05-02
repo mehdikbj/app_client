@@ -1,0 +1,14 @@
+<ion-view view-title="institutEcoJurSoc">
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="institutEcoJurSoc in institutEcoJurSocs"  item="institutEcoJurSoc" href="#/app/education/detailInstitutEcoJurSoc/{{ institutEcoJurSoc._id }}" class="item-remove-animate">
+        <h3>{{ institutEcoJurSoc._id }}-
+          {{ institutEcoJurSoc.Nom }}</h3>
+        <p>{{ institutEcoJurSoc.Ville }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

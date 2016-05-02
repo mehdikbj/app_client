@@ -3,12 +3,12 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 })
 
-.controller('agencesCtrl', function($scope, $http, SchoolService) {
+.controller('agencesCtrl', function($scope, $http, SearchService) {
 
     $scope.map = { center: { latitude: 33.5910948, longitude: -7.6137281 }, zoom: 5 };
     $scope.agences=[];
 
-    SchoolService.searchAgencies().then(function(response){
+    SearchService.searchAgencies().then(function(response){
       $scope.agences = response.data.result.records;
       $scope.myMarkers = extractMarkersFromData(response.data.result.records);
     });

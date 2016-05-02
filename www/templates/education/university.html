@@ -1,0 +1,14 @@
+<ion-view view-title="University">
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="university in universities"  item="university" href="#/app/education/detailUniversity/{{ university._id }}" class="item-remove-animate">
+        <h3>{{ university._id }}-
+          {{ university.Nom }}</h3>
+        <p>{{ university.Ville }} </p>
+      </ion-item>
+      </ion-list>
+
+  </ion-content>
+</ion-view>

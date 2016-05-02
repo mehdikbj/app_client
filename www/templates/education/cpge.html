@@ -1,0 +1,14 @@
+<ion-view view-title="cpge">
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="cpge in cpges"  item="cpge" href="#/app/education/detailCpge/{{ cpge._id }}" class="item-remove-animate">
+        <h3>{{ cpge._id }}-
+          {{ cpge.Nom }}</h3>
+        <p>{{ cpge.Ville }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

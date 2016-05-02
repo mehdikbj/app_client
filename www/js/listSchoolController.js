@@ -1,13 +1,13 @@
-angular.module('starter.listItemController', [])
+angular.module('starter.listSchoolController', [])
 
-.controller('listItemCtrl', function($scope, $http, SchoolService) {
+.controller('listItemCtrl', function($scope, $http, SearchService) {
   $scope.searchTxt='';
 
 
   $scope.doSearch= function (searchTxt) {
     console.log(searchTxt);
     var allItems = [];
-    SchoolService.searchSchool(searchTxt).then(function(response){
+    SearchService.searchSchool(searchTxt).then(function(response){
 
       data= response.data.result.records;
 
@@ -22,8 +22,8 @@ angular.module('starter.listItemController', [])
           Province: data[i].Province,
           Région: data[i].Région,
           TEL_ETAB: data[i].TEL_ETAB,
-          Ville: data[i].Ville
-          // mail: data[i].['e-mail']
+          Ville: data[i].Ville,
+          // mail: data[i]['e-mail']
         };
 
         allItems.push(item);
@@ -43,7 +43,7 @@ angular.module('starter.listItemController', [])
 
 })
 
-.controller('EcoleDetailCtrl',  function($scope, $http, $stateParams, SchoolService){
+.controller('EcoleDetailCtrl',  function($scope, $http, $stateParams, SearchService){
   var map;
   $scope.allMarkerEcole = [];
 
@@ -57,23 +57,31 @@ angular.module('starter.listItemController', [])
   };
 
 
-  SchoolService.getDataById($stateParams.ecoleId).then(function(response){
+  SearchService.getDataById($stateParams.ecoleId).then(function(response){
     $scope.ecole= response.data.result.records[0];
     console.log($scope.ecole);
   });
 
+  $scope.$on("$ionicView.enter", function(event, data){
+    initialize();
+  });
+
   function  initialize () {
+
     var allMarkerEcole = [];
     map = $scope.mapConfig.control.getGMap();
     var GMapService = new google.maps.places.PlacesService(map);
+
 
     $scope.allMarkerEcole =  allMarkerEcole;
 
     var request = {
       location: map.getCenter(),
       radius: '500',
-      query: 'ecole al bachir '
+      query: 'ecole al bachir marrakech'
     };
+    console.log('ici');
+
 
     GMapService.textSearch(request, function (results, status){
       var marker = {
@@ -84,15 +92,10 @@ angular.module('starter.listItemController', [])
         }
       };
       allMarkerEcole.push(marker);
-      // console.log(allMarkerEcole);
+      console.log(allMarkerEcole);
 
     })
 
   }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
 
 });
