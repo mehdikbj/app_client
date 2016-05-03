@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController' ])
 
 
 
@@ -270,6 +270,26 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/tourisme/detailAgenceVoy.html',
           controller: 'agenceVoyDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.guideTour', {
+      url: '/tourisme/guideTour',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/guideTour.html',
+          controller: 'guideTourCtrl'
+        }
+      }
+    })
+
+    .state('app.detailGuideTour', {
+      url: '/tourisme/detailGuideTour/:guideTourId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/detailGuideTour.html',
+          controller: 'guideTourDetailCtrl'
         }
       }
     })

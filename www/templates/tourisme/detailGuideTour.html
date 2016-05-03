@@ -1,0 +1,45 @@
+<ion-view view-title="Detail du guide">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-person"></i>
+        <h3>{{ guideTour.Nom }} {{ guideTour['Prénom'] }}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-chatboxes"></i>
+        {{ guideTour['Langue de travail'] }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-pricetags"></i>
+        {{ guideTour['Catégorie'] }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-home"></i>
+        {{ guideTour.Ville }}
+      </a>
+
+    </div>
+
+    <div>
+
+
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker  ng-repeat="m in allMarkerEcoleColleg" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+    </div>
+
+
+
+
+  </ion-content>
+
+
+</ion-view>
+

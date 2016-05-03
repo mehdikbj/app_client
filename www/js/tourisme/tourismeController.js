@@ -11,7 +11,7 @@ angular.module('starter.tourismeController', [])
       },
       {
         name: "Annuaire des guides touristiques",
-        goTo: "institutTechSci"
+        goTo: "guideTour"
       },
       {
         name: "Liste des établissements d'hébergement touristique",

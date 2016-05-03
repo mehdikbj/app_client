@@ -1,0 +1,25 @@
+<ion-view view-title=" Guides touristiques">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="guideTour in guideTours"  item="guideTour" href="#/app/tourisme/detailGuideTour/{{ guideTour._id }}" class="item-remove-animate">
+        <h3>{{ guideTour._id }}-
+          {{ guideTour.Nom }} {{ guideTour['Prénom'] }} </h3>
+        <p>{{ guideTour.Ville }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+
+
