@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController' ])
 
 
 
@@ -220,6 +220,26 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/education/detailEcoleColleg.html',
           controller: 'EcoleCollegDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.ecoleLyc', {
+      url: '/education/ecoleLyc',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/ecoleLyc.html',
+          controller: 'ecoleLycCtrl'
+        }
+      }
+    })
+
+    .state('app.detailEcoleLyc', {
+      url: '/education/detailEcoleLyc/:ecoleLycId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailEcoleLyc.html',
+          controller: 'EcoleLycDetailCtrl'
         }
       }
     })

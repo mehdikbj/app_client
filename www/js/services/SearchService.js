@@ -36,6 +36,10 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"73edf0a3-1b09-422c-a580-35b3d145e4db"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getEcoleLycById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"8d19050a-bce3-4684-8f8e-b4f9c17a3272"%20WHERE%20_id%20=%20'+Id);
+      },
+
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
       },
@@ -46,6 +50,10 @@ angular.module('starter.services')
 
       searchEcoleColleg: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=eb66a7fd-2cca-4bc4-8408-d0d282b53a41&q='+search+'&offset=0&limit=700');
+      },
+
+      searchEcoleLyc: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=8d19050a-bce3-4684-8f8e-b4f9c17a3272&q='+search+'&offset=0&limit=700');
       },
 
       searchAgencies: function () {

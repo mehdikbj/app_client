@@ -35,7 +35,7 @@ angular.module('starter.educationController', [])
       },
       {
         name: "lycées publics",
-        goTo: "listEcole"
+        goTo: "ecoleLyc"
       },
       {
         name: "Universités Marocaines 2014",
