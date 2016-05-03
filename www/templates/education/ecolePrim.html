@@ -1,7 +1,6 @@
-<ion-view view-title="cpge">
+<ion-view view-title="Liste des Ecoles Primaires">
 
   <ion-content>
-
     <div class="item item-input-inset">
       <label class="item-input-wrapper" name="ecole">
         <input ng-model= "searchTxt"  type="text" placeholder="Search">
@@ -10,14 +9,12 @@
         Submit
       </button>
     </div>
-
     <ion-list>
-      <ion-item ng-repeat="cpge in cpges"  item="cpge" href="#/app/education/detailCpge/{{ cpge._id }}" class="item-remove-animate">
-        <h3>{{ cpge._id }}-
-          {{ cpge.Nom }}</h3>
-        <p>{{ cpge.Ville }} </p>
+      <ion-item ng-repeat="ecolePrim in allEcolePrims"  item="ecolePrim" href="#/app/education/detailEcolePrim/{{ecolePrim._id}}" class="item-remove-animate">
+        <h3>
+          {{ ecolePrim.NOM_ETABLISSENTFR }}</h3>
+        <p>{{ ecolePrim.REGIN }} </p>
       </ion-item>
     </ion-list>
-
   </ion-content>
 </ion-view>

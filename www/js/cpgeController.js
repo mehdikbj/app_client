@@ -1,35 +1,41 @@
 angular.module('starter.cpgeController', [])
 
   .controller('cpgeCtrl', function($scope, $http, SearchService) {
-    var allcpge = [];
+    $scope.searchTxt='';
+
+    $scope.doSearch= function (searchTxt) {
+      console.log(searchTxt);
+      var allcpge = [];
+
+      SearchService.searchCpge(searchTxt).then(function (response) {
+
+        data = response.data.result.records;
+        // console.log(data);
+
+        for (var i = 0; i < data.length; i++) {
+          var cpge = {
+            _id: data[i]._id,
+            Adresse: data[i].ADRESSE,
+            Nom: data[i]["NOM ETABLISSEMENT"],
+            EMAIL: data[i].EMAIL,
+            TEL: data[i].TEL,
+            Ville: data[i].VILLE,
+            CYCLE: data[i].CYCLE,
+            REGION: data[i].REGION,
+            PROVINCE: data[i].PROVINCE,
+            COMMUNE: data[i].COMMUNE
+
+          };
+
+          allcpge.push(cpge);
+        }
+        $scope.cpges = allcpge;
 
 
-    SearchService.searchCpge().then(function (response) {
+      });
+    };
+    $scope.doSearch('');
 
-      data= response.data.result.records;
-      // console.log(data);
-
-      for(var i=0 ;i<data.length ;i++){
-        var cpge = {
-          _id: data[i]._id,
-          Adresse: data[i].ADRESSE,
-          Nom: data[i]["NOM ETABLISSEMENT"],
-          EMAIL: data[i].EMAIL,
-          TEL: data[i].TEL,
-          Ville: data[i].VILLE,
-          CYCLE: data[i].CYCLE,
-          REGION: data[i].REGION,
-          PROVINCE: data[i].PROVINCE,
-          COMMUNE: data[i].COMMUNE
-
-        };
-
-        allcpge.push(cpge);
-      }
-      $scope.cpges = allcpge;
-
-
-    });
 
   })
 

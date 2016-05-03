@@ -1,35 +1,41 @@
 angular.module('starter.btsController', [])
 
   .controller('btsCtrl', function($scope, $http, SearchService) {
-    var allbts = [];
+
+    $scope.doSearch= function (searchTxt) {
+      console.log(searchTxt);
+      var allbts = [];
 
 
-    SearchService.searchBts().then(function (response) {
+      SearchService.searchBts(searchTxt).then(function (response) {
 
-      data= response.data.result.records;
-      // console.log(data);
+        data = response.data.result.records;
+        // console.log(data);
 
-      for(var i=0 ;i<data.length ;i++){
-        var bts = {
-          _id: data[i]._id,
-          Adresse: data[i].ADRESSE,
-          Nom: data[i]["NOM ETABLISSEMENT"],
-          EMAIL: data[i].EMAIL,
-          TEL: data[i].TEL,
-          Ville: data[i].VILLE,
-          CYCLE: data[i].CYCLE,
-          REGION: data[i].REGION,
-          PROVINCE: data[i].PROVINCE,
-          COMMUNE: data[i].COMMUNE
+        for (var i = 0; i < data.length; i++) {
+          var bts = {
+            _id: data[i]._id,
+            Adresse: data[i].ADRESSE,
+            Nom: data[i]["NOM ETABLISSEMENT"],
+            EMAIL: data[i].EMAIL,
+            TEL: data[i].TEL,
+            Ville: data[i].VILLE,
+            CYCLE: data[i].CYCLE,
+            REGION: data[i].REGION,
+            PROVINCE: data[i].PROVINCE,
+            COMMUNE: data[i].COMMUNE
 
-        };
+          };
 
-        allbts.push(bts);
-      }
-      $scope.btss = allbts;
+          allbts.push(bts);
+        }
+        $scope.btss = allbts;
 
 
-    });
+      });
+    };
+    $scope.doSearch('');
+
 
   })
 

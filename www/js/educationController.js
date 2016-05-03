@@ -11,7 +11,7 @@ angular.module('starter.educationController', [])
       },
       {
         name: "Etablissements de formation des cadres-Formation scientifique et technique 2014",
-        goTo: "listEcole"
+        goTo: "institutTechSci"
       },
       {
         name: "Liste des établissements privés",
@@ -26,15 +26,15 @@ angular.module('starter.educationController', [])
         goTo: "cpge"
       },
       {
-        name: "Liste des établissements publics de l'enseignement collégial (2013 - 2014)",
-        goTo: "listEcole"
+        name: "primaire publi",
+        goTo: "ecolePrim"
       },
       {
-        name: "Liste des établissements publics de l'enseignement qualifiant (2013 - 2014)",
-        goTo: "listEcole"
+        name: "college publi",
+        goTo: "ecoleColleg"
       },
       {
-        name: "Liste des établissements scolaires publics",
+        name: "lycées publics",
         goTo: "listEcole"
       },
       {

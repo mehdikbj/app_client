@@ -36,11 +36,7 @@ angular.module('starter.listSchoolController', [])
   };
 
   $scope.doSearch('rabat');
-
-
-
-
-
+  
 })
 
 .controller('EcoleDetailCtrl',  function($scope, $http, $stateParams, SearchService){

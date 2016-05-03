@@ -15,6 +15,11 @@ angular.module('starter.services')
         return CkanHttp.get('/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"c790fd84-1dee-432e-b7f2-b3017dbb25a4"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getInstitutTechSciById: function (Id) {
+        return CkanHttp.get('/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"063ce060-053f-47c9-b162-20f1e98da504"%20WHERE%20_id%20=%20'+Id);
+      },
+
+
       getCpgeById: function (Id) {
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"b1546e9f-9282-4fd4-be16-06243f1dbd08"%20WHERE%20_id%20=%20'+Id);
       },
@@ -23,8 +28,24 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"20316b00-3580-4714-8888-a765e18e23ee"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getEcolePrimById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"73edf0a3-1b09-422c-a580-35b3d145e4db"%20WHERE%20_id%20=%20'+Id);
+      },
+
+      getEcoleCollegById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"73edf0a3-1b09-422c-a580-35b3d145e4db"%20WHERE%20_id%20=%20'+Id);
+      },
+
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
+      },
+
+      searchEcolePrim: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=73edf0a3-1b09-422c-a580-35b3d145e4db&q='+search+'&offset=0&limit=700');
+      },
+
+      searchEcoleColleg: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=eb66a7fd-2cca-4bc4-8408-d0d282b53a41&q='+search+'&offset=0&limit=700');
       },
 
       searchAgencies: function () {
@@ -37,23 +58,28 @@ angular.module('starter.services')
 
       },
 
-      searchInstitutEcoJurSoc: function () {
-        return CkanHttp.get( '/api/action/datastore_search?resource_id=c790fd84-1dee-432e-b7f2-b3017dbb25a4&limit=14');
+      searchInstitutEcoJurSoc: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=c790fd84-1dee-432e-b7f2-b3017dbb25a4&q='+search+'&limit=14');
 
       },
 
-      searchCpge: function () {
-        return CkanHttp.get( '/api/action/datastore_search?resource_id=b1546e9f-9282-4fd4-be16-06243f1dbd08&limit=22');
+      searchInstitutTechSci: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=063ce060-053f-47c9-b162-20f1e98da504&q='+search+'&limit=24');
 
       },
 
-      searchBts: function () {
-        return CkanHttp.get( '/api/action/datastore_search?resource_id=20316b00-3580-4714-8888-a765e18e23ee&limit=30');
+      searchCpge: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=b1546e9f-9282-4fd4-be16-06243f1dbd08&q='+search+'&limit=22');
 
       },
 
-      searchUniversity: function () {
-        return CkanHttp.get( '/api/action/datastore_search?resource_id=39c1431c-6d50-4831-bfeb-b1efb72220ef&limit=16');
+      searchBts: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=20316b00-3580-4714-8888-a765e18e23ee&q='+search+'&limit=30');
+
+      },
+
+      searchUniversity: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=39c1431c-6d50-4831-bfeb-b1efb72220ef&q='+search+'&limit=16');
 
       }
 

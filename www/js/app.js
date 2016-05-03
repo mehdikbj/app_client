@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController' ])
 
 
 
@@ -154,12 +154,72 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
       }
     })
 
+    .state('app.detailInstitutTechSci', {
+      url: '/education/detailInstitutTechSci/:institutTechSciId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailInstitutTechSci.html',
+          controller: 'institutTechSciDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.institutTechSci', {
+      url: '/education/institutTechSci',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/institutTechSci.html',
+          controller: 'institutTechSciCtrl'
+        }
+      }
+    })
+
     .state('app.detailInstitutEcoJurSoc', {
       url: '/education/detailInstitutEcoJurSoc/:institutEcoJurSocId',
       views: {
         'menuContent': {
           templateUrl: 'templates/education/detailInstitutEcoJurSoc.html',
           controller: 'institutEcoJurSocDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.ecolePrim', {
+      url: '/education/ecolePrim',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/ecolePrim.html',
+          controller: 'ecolePrimCtrl'
+        }
+      }
+    })
+
+    .state('app.detailEcolePrim', {
+      url: '/education/detailEcolePrim/:ecolePrimId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailEcolePrim.html',
+          controller: 'EcolePrimDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.ecoleColleg', {
+      url: '/education/ecoleColleg',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/ecoleColleg.html',
+          controller: 'ecoleCollegCtrl'
+        }
+      }
+    })
+
+    .state('app.detailEcoleColleg', {
+      url: '/education/detailEcoleColleg/:ecoleCollegId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education/detailEcoleColleg.html',
+          controller: 'EcoleCollegDetailCtrl'
         }
       }
     })

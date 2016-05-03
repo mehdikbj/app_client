@@ -2,6 +2,15 @@
 
   <ion-content>
 
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
     <ion-list>
       <ion-item ng-repeat="bts in btss"  item="cpge" href="#/app/education/detailBts/{{ bts._id }}" class="item-remove-animate">
         <h3>{{ bts._id }}-

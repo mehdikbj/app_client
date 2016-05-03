@@ -1,32 +1,34 @@
-angular.module('starter.universityController', [])
+angular.module('starter.institutTechSciController', [])
 
-  .controller('listUniversityCtrl', function($scope, $http, SearchService) {
+  .controller('institutTechSciCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
-
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
-      var allUniversity = [];
-      SearchService.searchUniversity(searchTxt).then(function (response) {
+      var allInstitutTechSci = [];
+
+
+      SearchService.searchInstitutTechSci(searchTxt).then(function (response) {
 
         data = response.data.result.records;
         // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
-          var university = {
+          var institutTechSci = {
             _id: data[i]._id,
             Adresse: data[i].Adresse,
             Fax: data[i].Fax,
             Nom: data[i].Nom,
-            Siteweb: data[i]['site web'],
+            Siteweb: data[i]["site web"],
             Téléphone: data[i]['Téléphone'],
             Ville: data[i].Ville
 
           };
 
-          allUniversity.push(university);
+          allInstitutTechSci.push(institutTechSci);
         }
-        $scope.universities = allUniversity;
+        $scope.institutTechScis = allInstitutTechSci;
+
 
       });
     };
@@ -36,9 +38,9 @@ angular.module('starter.universityController', [])
   })
 
 
-  .controller('universityDetailCtrl',  function($scope, $http, $stateParams, SearchService){
+  .controller('institutTechSciDetailCtrl',  function($scope, $http, $stateParams, SearchService){
     var map;
-    $scope.allMarkerEcole = [];
+    $scope.allMarkerInstitutTechSci = [];
 
     $scope.mapConfig = {
       center: {
@@ -50,9 +52,8 @@ angular.module('starter.universityController', [])
     };
 
 
-    SearchService.getUniversityById($stateParams.universityId).then(function(response){
-      $scope.university= response.data.result.records[0];
-      // console.log($scope.university.Nom);
+    SearchService.getInstitutTechSciById($stateParams.institutTechSciId).then(function(response){
+      $scope.institutTechSci= response.data.result.records[0];
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -61,12 +62,12 @@ angular.module('starter.universityController', [])
 
     function  initialize () {
 
-      var allMarkerUniversity = [];
+      var allMarkerInstitutTechSci = [];
       map = $scope.mapConfig.control.getGMap();
       var GMapService = new google.maps.places.PlacesService(map);
 
       // console.log($scope.university.Nom);
-      $scope.allMarkerUniversity =  allMarkerUniversity;
+      $scope.allMarkerInstitutTechSci =  allMarkerInstitutTechSci;
 
       var request = {
         location: map.getCenter(),
@@ -82,7 +83,7 @@ angular.module('starter.universityController', [])
             latitude: results[0].geometry.location.lat()
           }
         };
-        allMarkerUniversity.push(marker);
+        allMarkerInstitutTechSci.push(marker);
         // console.log(allMarkerUniversity);
         // console.log(request);
 
@@ -91,5 +92,4 @@ angular.module('starter.universityController', [])
     }
 
   });
-
 

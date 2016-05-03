@@ -1,33 +1,39 @@
 angular.module('starter.institutEcoJurSocController', [])
 
   .controller('institutEcoJurSocCtrl', function($scope, $http, SearchService) {
-    var allInstitutEcoJurSoc = [];
+
+    $scope.doSearch= function (searchTxt) {
+      console.log(searchTxt);
+      var allInstitutEcoJurSoc = [];
 
 
-    SearchService.searchInstitutEcoJurSoc().then(function (response) {
+      SearchService.searchInstitutEcoJurSoc(searchTxt).then(function (response) {
 
-      data= response.data.result.records;
-      // console.log(data);
+        data = response.data.result.records;
+        // console.log(data);
 
-      for(var i=0 ;i<data.length ;i++){
-        var institutEcoJurSoc = {
-          _id: data[i]._id,
-          Adresse: data[i].Adresse,
-          Fax: data[i].Fax,
-          Nom: data[i].Nom,
-          Siteweb: data[i]["site web"],
-          Téléphone: data[i]['Téléphone'],
-          Ville: data[i].Ville
+        for (var i = 0; i < data.length; i++) {
+          var institutEcoJurSoc = {
+            _id: data[i]._id,
+            Adresse: data[i].Adresse,
+            Fax: data[i].Fax,
+            Nom: data[i].Nom,
+            Siteweb: data[i]["site web"],
+            Téléphone: data[i]['Téléphone'],
+            Ville: data[i].Ville
 
-        };
+          };
 
-        allInstitutEcoJurSoc.push(institutEcoJurSoc);
-        // console.log(allInstitutEcoJurSoc);
-      }
-      $scope.institutEcoJurSocs = allInstitutEcoJurSoc;
+          allInstitutEcoJurSoc.push(institutEcoJurSoc);
+          // console.log(allInstitutEcoJurSoc);
+        }
+        $scope.institutEcoJurSocs = allInstitutEcoJurSoc;
 
 
-    });
+      });
+    };
+    $scope.doSearch('');
+
 
   })
 
