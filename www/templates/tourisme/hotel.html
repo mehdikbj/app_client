@@ -1,0 +1,24 @@
+<ion-view view-title="Hotels">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="hotel in hotels"  item="hotel" href="#/app/tourisme/detailHotel/{{ hotel._id }}" class="item-remove-animate">
+        <h3>{{ hotel._id }}-
+          {{ hotel.Nom }}</h3>
+        <p>{{ hotel.Province }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+

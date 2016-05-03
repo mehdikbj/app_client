@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController' ])
 
 
 
@@ -290,6 +290,26 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/tourisme/detailGuideTour.html',
           controller: 'guideTourDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.hotel', {
+      url: '/tourisme/hotel',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/hotel.html',
+          controller: 'hotelCtrl'
+        }
+      }
+    })
+
+    .state('app.detailHotel', {
+      url: '/tourisme/detailHotel/:hotelId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/detailHotel.html',
+          controller: 'hotelDetailCtrl'
         }
       }
     })

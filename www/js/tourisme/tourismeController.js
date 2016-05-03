@@ -14,8 +14,8 @@ angular.module('starter.tourismeController', [])
         goTo: "guideTour"
       },
       {
-        name: "Liste des établissements d'hébergement touristique",
-        goTo: "listEcole"
+        name: "Etablissements d'hébergement touristique",
+        goTo: "hotel"
       }
 
     ];

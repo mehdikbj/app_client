@@ -1,0 +1,52 @@
+<ion-view view-title="Detail Hotel">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <h3>{{ hotel["Hébergement"] }}</h3>
+        <p>{{ hotel.Adresse }} </p>
+        <p>{{ hotel.Province }} </p>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        {{ hotel["Tél"] }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-printer"></i>
+        {{ hotel.Fax}}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-star"></i>
+        {{ hotel["Catégorie/classement"]}}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-at"></i>
+        {{ hotel["e-mail"] }}
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker  ng-repeat="m in allMarkerUniversity" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>
+
