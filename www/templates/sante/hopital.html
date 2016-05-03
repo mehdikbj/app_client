@@ -1,0 +1,23 @@
+<ion-view view-title="Hopitals">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="hopital in hopitals"  item="hopital" href="#/app/sante/detailHopital/{{ hopital._id }}" class="item-remove-animate">
+        <h3>{{ hopital.Nom }}</h3>
+        <p>{{ hopital.province }} </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+

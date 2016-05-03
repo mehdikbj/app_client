@@ -1,0 +1,52 @@
+<ion-view view-title="Detail Hopital">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <h3>{{ hopital["Nom de l'hôpital"] }}</h3>
+        <p>{{ hopital['Provinces et Préfectures'] }} </p>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-location"></i>
+        {{ hopital['Régions']}}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-star"></i>
+        {{ hopital['Catégorie']}}
+      </a>
+
+    </div>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+      <h6>HGU: Hopital Général Universitaire  </h6>
+      <h6>HSU: Hopital Spécialisé Universitaire  </h6>
+      <h6>HGR: Hopital Général Régional </h6>
+      <h6>HSR: Hopital Spécialisé Régional </h6>
+      <h6>HGP: Hopital Général Provincial/Préfectoral </h6>
+      <h6>HSP: Hopital Spécialisé Provincial/Préfectoral </h6>
+      <h6>HL: Hôpital Local </h6>
+      </div>
+    </div>
+
+
+
+    <div>
+
+
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker  ng-repeat="m in allMarkerHopital" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>
