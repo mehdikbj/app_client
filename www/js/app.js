@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController' ])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController' ])
 
 
 
@@ -240,6 +240,36 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/education/detailEcoleLyc.html',
           controller: 'EcoleLycDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.tourismeElement', {
+      url: '/tourisme/tourismeElement',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/tourismeElement.html',
+          controller: 'tourismeListeCtrl'
+        }
+      }
+    })
+
+    .state('app.agenceVoy', {
+      url: '/tourisme/agenceVoy',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/agenceVoy.html',
+          controller: 'agenceVoyCtrl'
+        }
+      }
+    })
+
+    .state('app.detailAgenceVoy', {
+      url: '/tourisme/detailAgenceVoy/:agenceVoyId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tourisme/detailAgenceVoy.html',
+          controller: 'agenceVoyDetailCtrl'
         }
       }
     })

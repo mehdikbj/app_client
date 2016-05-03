@@ -40,6 +40,10 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"8d19050a-bce3-4684-8f8e-b4f9c17a3272"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getAgenceVoyById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"b3a6f721-ecd1-41c7-8ac8-462e00714172"%20WHERE%20_id%20=%20'+Id);
+      },
+
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
       },
@@ -89,7 +93,13 @@ angular.module('starter.services')
       searchUniversity: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=39c1431c-6d50-4831-bfeb-b1efb72220ef&q='+search+'&limit=16');
 
+      },
+
+      searchAgenceVoy: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=b3a6f721-ecd1-41c7-8ac8-462e00714172&q='+search+'&offset=0&limit=700');
+
       }
+
 
 
 
