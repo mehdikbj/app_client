@@ -11,11 +11,15 @@ angular.module('starter.santeController', [])
       },
       {
         name: "Les listes des agences CNSS",
-        goTo: "guideTour"
+        goTo: "cnss"
       },
       {
         name: "Liste des centres de santé",
-        goTo: "hotel"
+        goTo: "centreSante"
+      },
+      {
+        name: "liste des medicaments",
+        goTo: "medicament"
       }
 
     ];

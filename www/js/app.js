@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController'])
 
 
 
@@ -344,7 +344,65 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
       }
     })
 
+    .state('app.cnss', {
+      url: '/sante/cnss',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/cnss.html',
+          controller: 'agenceCnssCtrl'
+        }
+      }
+    })
 
+    .state('app.detailCnss', {
+      url: '/sante/detailCnss/:cnssId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/detailCnss.html',
+          controller: 'agenceCnssDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.centreSante', {
+      url: '/sante/centreSante',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/centreSante.html',
+          controller: 'centreSanteCtrl'
+        }
+      }
+    })
+
+    .state('app.detailCentreSante', {
+      url: '/sante/detailCentreSante/:centreSanteId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/detailCentreSante.html',
+          controller: 'centreSanteDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.medicament', {
+      url: '/sante/medicament',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/medicament.html',
+          controller: 'medicamentCtrl'
+        }
+      }
+    })
+
+    .state('app.detailMedicament', {
+      url: '/sante/detailMedicament/:medicamentId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/detailMedicament.html',
+          controller: 'medicamentDetailCtrl'
+        }
+      }
+    })
 
     .state('app.chart', {
       url: '/chart',

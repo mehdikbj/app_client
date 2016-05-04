@@ -1,4 +1,4 @@
-<ion-view view-title="Hopitals">
+<ion-view view-title="Medicaments">
 
   <ion-content>
 
@@ -12,11 +12,11 @@
     </div>
 
     <ion-list>
-      <ion-item ng-repeat="hopital in hopitals"  item="hopital" href="#/app/sante/detailHopital/{{ hopital._id }}" class="item-remove-animate">
-        <a href="#/app/sante/detailHopital/{{ hopital._id }}" class="item item-icon-left">
+      <ion-item ng-repeat="medicament in medicaments"  item="medicament" href="#/app/sante/detailMedicament/{{ medicament._id }}" class="item-remove-animate">
+        <a href="#/app/sante/detailMedicament/{{ medicament._id }}" class="item item-icon-left">
           <i class="icon ion-medkit"></i>
-        <h3>{{ hopital.Nom }}</h3>
-        <p>{{ hopital.province }} </p>
+          <h3>{{ medicament.NOM }} - {{ medicament.DCI1 }}</h3>
+          <p>{{ medicament.PRESENTATION }} </p>
         </a>
       </ion-item>
     </ion-list>

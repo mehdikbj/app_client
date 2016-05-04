@@ -1,0 +1,39 @@
+<ion-view view-title="Detail Agence CNSS">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <h3>{{ cnss.AGENCE }}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-location"></i>
+        {{ cnss.ADRESSE }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        {{ cnss.VILLE}}
+      </a>
+
+    </div>
+
+
+
+    <div>
+
+
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+        <ui-gmap-marker  ng-repeat="m in allMarkerCnss" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>

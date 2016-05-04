@@ -1,4 +1,4 @@
-<ion-view view-title="Hopitals">
+<ion-view view-title="Agences CNSS">
 
   <ion-content>
 
@@ -12,11 +12,11 @@
     </div>
 
     <ion-list>
-      <ion-item ng-repeat="hopital in hopitals"  item="hopital" href="#/app/sante/detailHopital/{{ hopital._id }}" class="item-remove-animate">
-        <a href="#/app/sante/detailHopital/{{ hopital._id }}" class="item item-icon-left">
-          <i class="icon ion-medkit"></i>
-        <h3>{{ hopital.Nom }}</h3>
-        <p>{{ hopital.province }} </p>
+      <ion-item ng-repeat="agenceCnss in agenceCnsss"  item="agenceCnss" href="#/app/sante/detailCnss/{{ agenceCnss._id }}" class="item-remove-animate">
+        <a href="#/app/sante/detailCnss/{{ agenceCnss._id }}" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <h3>Agence: {{ agenceCnss.AGENCE }}</h3>
+        <p>{{ agenceCnss.VILLE }} </p>
         </a>
       </ion-item>
     </ion-list>

@@ -1,0 +1,50 @@
+<ion-view view-title="Detail medicament">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-medkit"></i>
+        <h3>{{ medicament.NOM }}</h3>
+        <p>{{ medicament.DCI1 }} </p>
+        <p>{{ medicament.PRESENTATION }} </p>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        Dosage: {{ medicament.DOSAGE1 }} {{ medicament.UNITE_DOSAGE1}}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-medical"></i>
+        {{ medicament.FORME}}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-erlenmeyer-flask"></i>
+        <p> PPV: {{ medicament.PPV}}</p>
+        <p> PH: {{ medicament.PH}}</p>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-social-usd"></i>
+        Prix: {{ medicament.PRIX_BR }} DH
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-star"></i>
+        PRINCEPS/GENERIQUE: {{ medicament.PRINCEPS_GENERIQUE }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-cash"></i>
+        Remboursement: {{ medicament.TAUX_REMBOURSEMENT }}
+      </a>
+
+    </div>
+
+  </ion-content>
+
+
+</ion-view>
