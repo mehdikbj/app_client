@@ -76,6 +76,10 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"54a44500-4a30-4b11-bfaa-cd1f23a7424c"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getLienGovById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"63f6a4fe-bff7-41b0-8ed9-4d77d3caa817"%20WHERE%20_id%20=%20'+Id);
+      },
+
 
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
@@ -170,6 +174,11 @@ angular.module('starter.services')
 
       searchExpert: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=54a44500-4a30-4b11-bfaa-cd1f23a7424c&q='+search+'&offset=0&limit=142');
+
+      },
+
+      searchLienGov: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=63f6a4fe-bff7-41b0-8ed9-4d77d3caa817&q='+search+'&offset=0&limit=142');
 
       }
 

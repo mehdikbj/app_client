@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController', 'starter.chartFsiController', 'starter.chartTatwirController'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController', 'starter.chartFsiController', 'starter.chartTatwirController', 'starter.lienGovController', 'starter.societeController'])
 
 
 
@@ -470,6 +470,36 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/RD/tatwir.html',
           controller: 'chartTatwirCtrl'
+        }
+      }
+    })
+
+    .state('app.societeElement', {
+      url: '/societe/societeElement',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/societe/societeElement.html',
+          controller: 'societListeCtrl'
+        }
+      }
+    })
+
+    .state('app.lienGov', {
+      url: '/societe/lienGov',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/societe/lienGov.html',
+          controller: 'lienGovCtrl'
+        }
+      }
+    })
+
+    .state('app.detailLienGov', {
+      url: '/societe/detailLienGov/:lienGovId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/societe/detailLienGov.html',
+          controller: 'lienGovDetailCtrl'
         }
       }
     })

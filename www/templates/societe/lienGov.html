@@ -1,0 +1,27 @@
+<ion-view view-title="Liens Services e-Gov">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+    <div class="list">
+
+      <a ng-repeat="lienGov in lienGovs" class="item item-icon-left" href="#/app/societe/detailLienGov/{{ lienGov._id }}"">
+        <i class="icon ion-at"></i>
+        <h3>{{ lienGov._id }}-
+          {{ lienGov.intitule}} </h3>
+        <p>{{ lienGov.Cible }} </p>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+
