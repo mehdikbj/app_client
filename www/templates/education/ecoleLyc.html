@@ -9,12 +9,15 @@
         Submit
       </button>
     </div>
-    <ion-list>
-      <ion-item ng-repeat="ecoleLyc in allEcoleLycs"  item="ecoleLyc" href="#/app/education/detailEcoleLyc/{{ecoleLyc._id}}" class="item-remove-animate">
-        <h3>
-          {{ ecoleLyc.NOM_ETABLISSENTFR }}</h3>
+
+    <div class="list">
+
+      <a ng-repeat="ecoleLyc in allEcoleLycs" class="item item-icon-left" href="#/app/education/detailEcoleLyc/{{ecoleLyc._id}}">
+        <i class="icon ion-university"></i>
+        <h3>{{ ecoleLyc.NOM_ETABLISSENTFR }}</h3>
         <p>{{ ecoleLyc.REGION }} </p>
-      </ion-item>
-    </ion-list>
+      </a>
+    </div>
+
   </ion-content>
 </ion-view>

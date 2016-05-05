@@ -11,13 +11,14 @@
       </button>
     </div>
 
-    <ion-list>
-      <ion-item ng-repeat="university in universities"  item="university" href="#/app/education/detailUniversity/{{ university._id }}" class="item-remove-animate">
-        <h3>{{ university._id }}-
-          {{ university.Nom }}</h3>
+    <div class="list">
+
+      <a ng-repeat="university in universities" class="item item-icon-left" href="#/app/education/detailUniversity/{{ university._id }}">
+        <i class="icon ion-university"></i>
+        <h3>{{ university.Nom }}</h3>
         <p>{{ university.Ville }} </p>
-      </ion-item>
-      </ion-list>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>

@@ -11,13 +11,14 @@
       </button>
     </div>
 
-    <ion-list>
-      <ion-item ng-repeat="institutTechSci in institutTechScis"  item="institutTechSci" href="#/app/education/detailInstitutTechSci/{{ institutTechSci._id }}" class="item-remove-animate">
-        <h3>{{ institutTechSci._id }}-
-          {{ institutTechSci.Nom }}</h3>
+    <div class="list">
+
+      <a ng-repeat="institutTechSci in institutTechScis" class="item item-icon-left" href="#/app/education/detailInstitutTechSci/{{ institutTechSci._id }}">
+        <i class="icon ion-university"></i>
+        <h3>{{ institutTechSci.Nom }}</h3>
         <p>{{ institutTechSci.Ville }} </p>
-      </ion-item>
-    </ion-list>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>

@@ -9,13 +9,16 @@
       Submit
     </button>
   </div>
-  <ion-list>
-    <ion-item ng-repeat="item in items"  item="item" href="#/app/education/detailEcole/{{item._id}}" class="item-remove-animate">
-      <h3>{{ item._id }}-
-      {{ item.NOM_ETABL }}</h3>
+
+  <div class="list">
+
+    <a ng-repeat="item in items" class="item item-icon-left" href="#/app/education/detailEcole/{{item._id}}">
+      <i class="icon ion-university"></i>
+      <h3>{{ item.NOM_ETABL }}</h3>
       <p>{{ item.Ville }} </p>
-    </ion-item>
-  </ion-list>
+    </a>
+  </div>
+
 </ion-content>
 </ion-view>
 

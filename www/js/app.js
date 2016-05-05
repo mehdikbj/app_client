@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController', 'starter.chartFsiController', 'starter.chartTatwirController'])
 
 
 
@@ -450,6 +450,26 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/RD/detailExpert.html',
           controller: 'expertDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.chartFsi', {
+      url: '/RD/chartFsi',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/RD/chartFsi.html',
+          controller: 'chartFsiCtrl'
+        }
+      }
+    })
+
+    .state('app.tatwir', {
+      url: '/RD/tatwir',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/RD/tatwir.html',
+          controller: 'chartTatwirCtrl'
         }
       }
     })

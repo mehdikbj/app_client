@@ -8,9 +8,17 @@ angular.module('starter.rdController', [])
       {
         name: "La liste des experts scientifiques du CNRST",
         goTo:  "expert"
+      },
+
+      {
+        name: "Statistiques du FSI - Intilak",
+        goTo:  "chartFsi"
+      },
+
+      {
+        name: "Statistiques du FSI - Tatwir",
+        goTo:  "tatwir"
       }
-
-
 
     ];
 
