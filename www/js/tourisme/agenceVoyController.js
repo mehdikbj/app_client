@@ -43,7 +43,7 @@ angular.module('starter.agenceVoyController', [])
       if(!agenceVoy) return "";
       var str = agenceVoy["Coordonnées"];
       var res = str.split(" ");
-      
+
       return res;
     };
 
@@ -68,33 +68,36 @@ angular.module('starter.agenceVoyController', [])
 
     function  initialize () {
 
-      var allMarkerAgenceVoy = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
+      SearchService.getAgenceVoyById($stateParams.agenceVoyId).then(function(response){
+        var findInMap=  response.data.result.records[0]['Raison Sociale'] + ' '+response.data.result.records[0].Ville
+        console.log(findInMap);
+        var allMarkerAgenceVoy = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
-      // console.log($scope.university.Nom);
-      $scope.allMarkerAgenceVoy =  allMarkerAgenceVoy;
+        // console.log($scope.university.Nom);
+        $scope.allMarkerAgenceVoy =  allMarkerAgenceVoy;
 
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'al bachir marrakech'
-      };
-
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerAgenceVoy.push(marker);
-        // console.log(allMarkerUniversity);
-        // console.log(request);
 
-      })
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+          };
+          allMarkerAgenceVoy.push(marker);
+          // console.log(allMarkerUniversity);
+          // console.log(request);
 
-    }
+        })
+        });
+      }
 
-  });
+    });

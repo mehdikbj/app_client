@@ -1,4 +1,4 @@
-<ion-view view-title="Agences CNSS">
+<ion-view view-title=" Experts Scientifiques">
 
   <ion-content>
 
@@ -11,15 +11,13 @@
       </button>
     </div>
 
-    <div class="list">
-
-      <a ng-repeat="agenceCnss in agenceCnsss" class="item item-icon-left" href="#/app/sante/detailCnss/{{ agenceCnss._id }}">
-        <i class="icon ion-home"></i>
-        <h3>Agence: {{ agenceCnss.AGENCE }}</h3>
-        <p>{{ agenceCnss.VILLE }} </p>
-      </a>
-    </div>
+    <ion-list>
+      <ion-item ng-repeat="expert in experts"  item="expert" href="#/app/RD/detailExpert/{{ expert._id }}" class="item-remove-animate">
+        <h3>{{ expert._id }}-
+          {{ expert.Nom }} </h3>
+        <p>{{ expert.specialite}} </p>
+      </ion-item>
+    </ion-list>
 
   </ion-content>
 </ion-view>
-

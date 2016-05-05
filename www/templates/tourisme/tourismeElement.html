@@ -1,11 +1,16 @@
 <ion-view view-title="Tourisme">
 
+
   <ion-content>
 
     <ion-list>
       <ion-item ng-repeat="item in tourismeListe"  item="item" href="#/app/tourisme/{{item.goTo}}" class="item-remove-animate">
 
-        {{item.name}}
+        <h2>
+          <i class="icon ion-plane"></i>
+          {{item.name}}
+
+        </h2>
 
       </ion-item>
     </ion-list>

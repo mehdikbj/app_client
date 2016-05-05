@@ -65,6 +65,10 @@ angular.module('starter.cpgeController', [])
 
     function  initialize () {
 
+      SearchService.getCpgeById($stateParams.cpgeId).then(function(response){
+        var findInMap=  response.data.result.records[0]["NOM ETABLISSEMENT"] + ' '+ response.data.result.records[0].VILLE ;
+        console.log(findInMap);
+
       var allMarkercpge = [];
       map = $scope.mapConfig.control.getGMap();
       var GMapService = new google.maps.places.PlacesService(map);
@@ -74,8 +78,10 @@ angular.module('starter.cpgeController', [])
       var request = {
         location: map.getCenter(),
         radius: '500',
-        query: 'al bachir marrakech'
+        query: findInMap
       };
+
+        console.log(request);
 
       GMapService.textSearch(request, function (results, status){
         var marker = {
@@ -92,7 +98,7 @@ angular.module('starter.cpgeController', [])
         // console.log(request);
 
       })
-
+      });
     }
 
   });

@@ -52,7 +52,6 @@ angular.module('starter.universityController', [])
 
     SearchService.getUniversityById($stateParams.universityId).then(function(response){
       $scope.university= response.data.result.records[0];
-      // console.log($scope.university.Nom);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -61,35 +60,35 @@ angular.module('starter.universityController', [])
 
     function  initialize () {
 
-      var allMarkerUniversity = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
+      SearchService.getUniversityById($stateParams.universityId).then(function(response){
+        var findInMap=  response.data.result.records[0].Nom +' ' + response.data.result.records[0].Ville;
+        var allMarkerUniversity = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
-      // console.log($scope.university.Nom);
-      $scope.allMarkerUniversity =  allMarkerUniversity;
+        $scope.allMarkerUniversity =  allMarkerUniversity;
 
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'al bachir marrakech'
-      };
-
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerUniversity.push(marker);
-        // console.log(allMarkerUniversity);
-        // console.log(request);
+        console.log(request);
 
-      })
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+          };
+          allMarkerUniversity.push(marker);
 
-    }
+        })
+        });
+      }
 
-  });
+    });
 
 

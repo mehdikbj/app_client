@@ -11,15 +11,25 @@
       </button>
     </div>
 
-    <ion-list>
-      <ion-item ng-repeat="centreSante in centreSantes"  item="centreSante" href="#/app/sante/detailCentreSante/{{ centreSante._id }}" class="item-remove-animate">
-        <a href="#/app/sante/detailCentreSante/{{ centreSante._id }}" class="item item-icon-left">
-          <i class="icon ion-medkit"></i>
-          <h3>Centre {{ centreSante.Nom}}</h3>
-          <p>{{ centreSante.Province }} </p>
-        </a>
-      </ion-item>
-    </ion-list>
+    <!--<ion-list>-->
+      <!--<ion-item ng-repeat="centreSante in centreSantes"  item="centreSante" href="#/app/sante/detailCentreSante/{{ centreSante._id }}" class="item-remove-animate">-->
+        <!--<a href="#/app/sante/detailCentreSante/{{ centreSante._id }}" class="item item-icon-left">-->
+          <!--<i class="icon ion-medkit"></i>-->
+          <!--<h3>Centre {{ centreSante.Nom}}</h3>-->
+          <!--<p>{{ centreSante.Province }} </p>-->
+        <!--</a>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+
+
+    <div class="list">
+
+      <a ng-repeat="centreSante in centreSantes" class="item item-icon-left" href="#/app/sante/detailCentreSante/{{ centreSante._id }}">
+        <i class="icon ion-medkit"></i>
+        <h3>Centre {{ centreSante.Nom}}</h3>
+        <p>{{ centreSante.Commune }} </p>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>

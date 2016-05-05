@@ -1,17 +1,19 @@
 <ion-view view-title="Santé">
 
+
   <ion-content>
 
     <ion-list>
       <ion-item ng-repeat="item in santeListe"  item="item" href="#/app/sante/{{item.goTo}}" class="item-remove-animate">
 
-        {{item.name}}
+        <h2>
+          <i class="icon ion-medkit"></i>
+          {{item.name}}
+
+        </h2>
 
       </ion-item>
     </ion-list>
-
-
-
   </ion-content>
 
 

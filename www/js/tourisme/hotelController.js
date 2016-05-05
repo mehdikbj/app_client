@@ -64,32 +64,37 @@ angular.module('starter.hotelController', [])
 
     function  initialize () {
 
-      var allMarkerHotel = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
+      SearchService.getHotelById($stateParams.hotelId).then(function(response){
+        var findInMap=  response.data.result.records[0]['Hébergement']+' ' + response.data.result.records[0].Province;
 
-      // console.log($scope.university.Nom);
-      $scope.allMarkerHotel =  allMarkerHotel;
+        var allMarkerHotel = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'al bachir marrakech'
-      };
+        // console.log($scope.university.Nom);
+        $scope.allMarkerHotel =  allMarkerHotel;
 
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerHotel.push(marker);
-        // console.log(allMarkerUniversity);
-        // console.log(request);
 
-      })
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+        };
+          console.log(marker);
+          allMarkerHotel.push(marker);
+          // console.log(allMarkerUniversity);
+          // console.log(request);
+
+        })
+        });
 
     }
 

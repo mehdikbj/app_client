@@ -16,16 +16,14 @@
       </a>
 
     </div>
-
+    <div class="card">
     <div>
-
-
       <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
-        <ui-gmap-marker  ng-repeat="m in allMarkerHopital" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+        <ui-gmap-marker  ng-repeat="m in allMarkerCentreSante" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
       </ui-gmap-google-map>
 
     </div>
-
+    </div>
 
   </ion-content>
 

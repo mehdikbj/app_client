@@ -68,6 +68,15 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"b518e135-c95a-4b72-8134-c706506212cd"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getDispMedById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"f0668e90-f690-4115-b563-e7dbc2b2a8e7"%20WHERE%20_id%20=%20'+Id);
+      },
+
+      getExpertById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"54a44500-4a30-4b11-bfaa-cd1f23a7424c"%20WHERE%20_id%20=%20'+Id);
+      },
+
+
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
       },
@@ -152,7 +161,18 @@ angular.module('starter.services')
       searchMedicament: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=b518e135-c95a-4b72-8134-c706506212cd&q='+search+'&offset=0&limit=142');
 
+      },
+
+      searchDispMed: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=f0668e90-f690-4115-b563-e7dbc2b2a8e7&q='+search+'&offset=0&limit=142');
+
+      },
+
+      searchExpert: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=54a44500-4a30-4b11-bfaa-cd1f23a7424c&q='+search+'&offset=0&limit=142');
+
       }
+
 
 
 

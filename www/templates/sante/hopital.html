@@ -11,15 +11,14 @@
       </button>
     </div>
 
-    <ion-list>
-      <ion-item ng-repeat="hopital in hopitals"  item="hopital" href="#/app/sante/detailHopital/{{ hopital._id }}" class="item-remove-animate">
-        <a href="#/app/sante/detailHopital/{{ hopital._id }}" class="item item-icon-left">
-          <i class="icon ion-medkit"></i>
-        <h3>{{ hopital.Nom }}</h3>
+    <div class="list">
+
+      <a ng-repeat="hopital in hopitals" class="item item-icon-left" href="#/app/sante/detailHopital/{{ hopital._id }}">
+        <i class="icon ion-medkit"></i>
+        <h3> Hôpital {{ hopital.Nom }}</h3>
         <p>{{ hopital.province }} </p>
-        </a>
-      </ion-item>
-    </ion-list>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>

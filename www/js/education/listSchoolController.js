@@ -36,7 +36,7 @@ angular.module('starter.listSchoolController', [])
   };
 
   $scope.doSearch('rabat');
-  
+
 })
 
 .controller('EcoleDetailCtrl',  function($scope, $http, $stateParams, SearchService){
@@ -63,35 +63,37 @@ angular.module('starter.listSchoolController', [])
   });
 
   function  initialize () {
+    SearchService.getDataById($stateParams.ecoleId).then(function(response){
+      var findInMap=  response.data.result.records[0].NOM_ETABL + ' '+response.data.result.records[0].Ville;
 
-    var allMarkerEcole = [];
-    map = $scope.mapConfig.control.getGMap();
-    var GMapService = new google.maps.places.PlacesService(map);
-
-
-    $scope.allMarkerEcole =  allMarkerEcole;
-
-    var request = {
-      location: map.getCenter(),
-      radius: '500',
-      query: 'ecole al bachir marrakech'
-    };
-    console.log('ici');
+      var allMarkerEcole = [];
+      map = $scope.mapConfig.control.getGMap();
+      var GMapService = new google.maps.places.PlacesService(map);
 
 
-    GMapService.textSearch(request, function (results, status){
-      var marker = {
-        id: results[0].id,
-        coord: {
-          longitude: results[0].geometry.location.lng(),
-          latitude: results[0].geometry.location.lat()
-        }
+      $scope.allMarkerEcole =  allMarkerEcole;
+
+      var request = {
+        location: map.getCenter(),
+        radius: '500',
+        query: findInMap
       };
-      allMarkerEcole.push(marker);
-      console.log(allMarkerEcole);
+      console.log('ici');
 
-    })
 
-  }
+      GMapService.textSearch(request, function (results, status){
+        var marker = {
+          id: results[0].id,
+          coord: {
+            longitude: results[0].geometry.location.lng(),
+            latitude: results[0].geometry.location.lat()
+          }
+        };
+        allMarkerEcole.push(marker);
+        console.log(allMarkerEcole);
 
-});
+      })
+      });
+    }
+
+  });

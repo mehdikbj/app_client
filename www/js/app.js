@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController'])
 
 
 
@@ -400,6 +400,56 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/sante/detailMedicament.html',
           controller: 'medicamentDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.dispMed', {
+      url: '/sante/dispMed',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/dispMed.html',
+          controller: 'dispMedCtrl'
+        }
+      }
+    })
+
+    .state('app.detailDispMed', {
+      url: '/sante/detailDispMed/:dispMedId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sante/detailDispMed.html',
+          controller: 'dispMedDetailCtrl'
+        }
+      }
+    })
+
+    .state('app.rdElement', {
+      url: '/RD/rdElement',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/RD/rdElement.html',
+          controller: 'rdListCtrl'
+        }
+      }
+    })
+
+    .state('app.expert', {
+      url: '/RD/expert',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/RD/expert.html',
+          controller: 'expertCtrl'
+        }
+      }
+    })
+
+    .state('app.detailExpert', {
+      url: '/RD/detailExpert/:expertId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/RD/detailExpert.html',
+          controller: 'expertDetailCtrl'
         }
       }
     })

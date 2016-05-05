@@ -18,27 +18,27 @@ angular.module('starter.educationController', [])
         goTo: "listEcole"
       },
       {
-        name: "Liste des établissements publics BTS (2013 - 2014)",
+        name: "BTS publics",
         goTo: "bts"
       },
       {
-        name: "Liste des établissements publics CPGE (2013 - 2014)",
+        name: "CPGE publics",
         goTo: "cpge"
       },
       {
-        name: "primaire publi",
+        name: "Ecoles Primaires pubiques",
         goTo: "ecolePrim"
       },
       {
-        name: "college publi",
+        name: "Les Colleges publics",
         goTo: "ecoleColleg"
       },
       {
-        name: "lycées publics",
+        name: "Les Lycées publics",
         goTo: "ecoleLyc"
       },
       {
-        name: "Universités Marocaines 2014",
+        name: "Les Universités Marocaines",
         goTo: "university"
       }
 

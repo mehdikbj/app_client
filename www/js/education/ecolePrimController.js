@@ -61,35 +61,37 @@ angular.module('starter.ecolePrimController', [])
     });
 
     function  initialize () {
+      SearchService.getEcolePrimById($stateParams.ecolePrimId).then(function(response){
+        var findInMap=  response.data.result.records[0].NOM_ETABLISSENTFR + ' '+response.data.result.records[0].PROVINCE;
 
-      var allMarkerEcolePrim = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
-
-
-      $scope.allMarkerEcolePrim =  allMarkerEcolePrim;
-
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'ecole al bachir marrakech'
-      };
-      console.log('ici');
+        var allMarkerEcolePrim = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
 
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        $scope.allMarkerEcolePrim =  allMarkerEcolePrim;
+
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerEcolePrim.push(marker);
-        console.log(allMarkerEcolePrim);
+        console.log('ici');
 
-      })
 
-    }
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+          };
+          allMarkerEcolePrim.push(marker);
+          console.log(allMarkerEcolePrim);
 
-  });
+        })
+        });
+      }
+
+    });

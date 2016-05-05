@@ -62,34 +62,38 @@ angular.module('starter.hopitalController', [])
 
     function  initialize () {
 
-      var allMarkerHopital = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
+      SearchService.getHopitalById($stateParams.hopitalId).then(function(response){
+        var findInMap=  'hopital' +' '+ response.data.result.records[0]["Nom de l'hôpital"]+' ' + response.data.result.records[0]["ville /commue d'implantation de l'hôpital"];
+        console.log(findInMap);
 
-      // console.log($scope.university.Nom);
-      $scope.allMarkerHopital =  allMarkerHopital;
+        var allMarkerHopital = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'al bachir marrakech'
-      };
+        // console.log($scope.university.Nom);
+        $scope.allMarkerHopital =  allMarkerHopital;
 
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerHopital.push(marker);
-        // console.log(allMarkerUniversity);
-        // console.log(request);
 
-      })
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+          };
+          allMarkerHopital.push(marker);
+          // console.log(allMarkerUniversity);
+          // console.log(request);
 
-    }
+        })
+        });
+      }
 
   });
 

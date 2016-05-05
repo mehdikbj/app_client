@@ -10,16 +10,21 @@ angular.module('starter.santeController', [])
         goTo:  "hopital"
       },
       {
-        name: "Les listes des agences CNSS",
+        name: "La listes des agences CNSS",
         goTo: "cnss"
       },
       {
-        name: "Liste des centres de santé",
+        name: "La liste des centres de santé",
         goTo: "centreSante"
       },
       {
-        name: "liste des medicaments",
+        name: "La liste des medicaments",
         goTo: "medicament"
+      },
+
+      {
+        name: "Dispositifs médicaux admis au rembourssement",
+        goTo: "dispMed"
       }
 
     ];

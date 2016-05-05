@@ -1,0 +1,37 @@
+<ion-view view-title="Detail Expert">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-person"></i>
+        <h3>{{ expert["Nom et Prénom"] }} </h3>
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-star"></i>
+        {{ expert["Spécialité"] }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        {{ expert.ETAB }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-at"></i>
+        {{ expert.Email }}
+      </a>
+
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+        {{ expert.Tel }}
+      </a>
+
+    </div>
+
+  </ion-content>
+
+
+</ion-view>

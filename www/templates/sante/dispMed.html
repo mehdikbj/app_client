@@ -1,4 +1,4 @@
-<ion-view view-title="Agences CNSS">
+<ion-view view-title="Dispositifs médicaux admis au rembourssement">
 
   <ion-content>
 
@@ -11,12 +11,14 @@
       </button>
     </div>
 
+
     <div class="list">
 
-      <a ng-repeat="agenceCnss in agenceCnsss" class="item item-icon-left" href="#/app/sante/detailCnss/{{ agenceCnss._id }}">
-        <i class="icon ion-home"></i>
-        <h3>Agence: {{ agenceCnss.AGENCE }}</h3>
-        <p>{{ agenceCnss.VILLE }} </p>
+      <a ng-repeat="dispMed in dispMeds" class="item item-icon-left" href="#/app/sante/detailDispMed/{{ dispMed._id }}">
+        <i class="icon ion-medkit"></i>
+        <h3>
+          {{ dispMed.DCI1 }}
+        </h3>
       </a>
     </div>
 

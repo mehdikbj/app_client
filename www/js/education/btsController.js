@@ -65,31 +65,34 @@ angular.module('starter.btsController', [])
 
     function  initialize () {
 
-      var allMarkerbts = [];
-      map = $scope.mapConfig.control.getGMap();
-      var GMapService = new google.maps.places.PlacesService(map);
+      SearchService.getBtsById($stateParams.btsId).then(function(response){
+        var findInMap=  response.data.result.records[0]["NOM ETABLISSEMENT"] + ' '+response.data.result.records[0].VILLE;
 
-      $scope.allMarkerbts =  allMarkerbts;
+        var allMarkerbts = [];
+        map = $scope.mapConfig.control.getGMap();
+        var GMapService = new google.maps.places.PlacesService(map);
 
-      var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'al bachir marrakech'
-      };
+        $scope.allMarkerbts =  allMarkerbts;
 
-      GMapService.textSearch(request, function (results, status){
-        var marker = {
-          id: results[0].id,
-          coord: {
-            longitude: results[0].geometry.location.lng(),
-            latitude: results[0].geometry.location.lat()
-          }
+        var request = {
+          location: map.getCenter(),
+          radius: '500',
+          query: findInMap
         };
-        allMarkerbts.push(marker);
+
+        GMapService.textSearch(request, function (results, status){
+          var marker = {
+            id: results[0].id,
+            coord: {
+              longitude: results[0].geometry.location.lng(),
+              latitude: results[0].geometry.location.lat()
+            }
+          };
+          allMarkerbts.push(marker);
 
 
-      })
+        })
+        });
+      }
 
-    }
-
-  });
+    });

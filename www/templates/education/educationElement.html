@@ -3,15 +3,16 @@
   <ion-content>
 
     <ion-list>
-      <ion-item ng-repeat="item in educationListe"  item="item" href="#/app/education/{{item.goTo}}" class="item-remove-animate">
+      <ion-item menu-close ng-repeat="item in educationListe"  item="item" href="#/app/education/{{item.goTo}}" class="item-remove-animate ">
 
-        {{item.name}}
+        <h2>
+          <i class="icon ion-university"></i>
+          {{item.name}}
+
+        </h2>
 
       </ion-item>
       </ion-list>
-
-
-
   </ion-content>
 
 
