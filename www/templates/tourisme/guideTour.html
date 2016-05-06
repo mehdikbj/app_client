@@ -12,7 +12,7 @@
     </div>
 
     <ion-list>
-      <ion-item ng-repeat="guideTour in guideTours"  item="guideTour" href="#/app/tourisme/detailGuideTour/{{ guideTour._id }}" class="item-remove-animate">
+      <ion-item ng-repeat="guideTour in guideTours"  item="guideTour" href="#/app/tourisme/detailGuideTour/{{ guideTour._id }}" class="item-remove-animate item-text-wrap">
         <h3>{{ guideTour._id }}-
           {{ guideTour.Nom }} {{ guideTour['Prénom'] }} </h3>
         <p>{{ guideTour.Ville }} </p>

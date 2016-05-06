@@ -1,4 +1,4 @@
-<ion-view view-title="cpge">
+<ion-view view-title="Centres d'Appels Administratifs">
 
   <ion-content>
 
@@ -11,14 +11,12 @@
       </button>
     </div>
 
-
-
     <div class="list">
 
-      <a ng-repeat="cpge in cpges" class="item item-icon-left item-text-wrap" href="#/app/education/detailCpge/{{ cpge._id }}">
-        <i class="icon ion-university"></i>
-        <h3>{{ cpge.Nom }}</h3>
-        <p>{{ cpge.Ville }} </p>
+      <a ng-repeat="centreAppel in centreAppels" class="item item-icon-left item-text-wrap" href="#/app/societe/detailCentreAppel/{{ centreAppel._id }}">
+        <i class="icon ion-ios-telephone"></i>
+        <h3>{{ centreAppel.Nom}} </h3>
+        <p>{{ centreAppel.NomCentre }} </p>
       </a>
     </div>
 

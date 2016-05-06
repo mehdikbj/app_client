@@ -5,16 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967a2f44-3235-4537-b4a4-5c90fb59e1dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/societe/lienGovController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/societe/societeController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/detailLienGov.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/lienGov.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/societeElement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/societe/centreAppelController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/societe/teleServiceController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/centreAppel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/detailCentreAppel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/detailTeleService.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/societe/teleService.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services/SearchService.js" afterPath="$PROJECT_DIR$/www/js/services/SearchService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/societe/lienGovController.js" afterPath="$PROJECT_DIR$/www/js/societe/lienGovController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/societe/societeController.js" afterPath="$PROJECT_DIR$/www/js/societe/societeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/RD/detailExpert.html" afterPath="$PROJECT_DIR$/www/templates/RD/detailExpert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/RD/expert.html" afterPath="$PROJECT_DIR$/www/templates/RD/expert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/RD/rdElement.html" afterPath="$PROJECT_DIR$/www/templates/RD/rdElement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/bts.html" afterPath="$PROJECT_DIR$/www/templates/education/bts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/cpge.html" afterPath="$PROJECT_DIR$/www/templates/education/cpge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailBts.html" afterPath="$PROJECT_DIR$/www/templates/education/detailBts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailCpge.html" afterPath="$PROJECT_DIR$/www/templates/education/detailCpge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailEcole.html" afterPath="$PROJECT_DIR$/www/templates/education/detailEcole.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailEcoleColleg.html" afterPath="$PROJECT_DIR$/www/templates/education/detailEcoleColleg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailEcoleLyc.html" afterPath="$PROJECT_DIR$/www/templates/education/detailEcoleLyc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailEcolePrim.html" afterPath="$PROJECT_DIR$/www/templates/education/detailEcolePrim.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailInstitutEcoJurSoc.html" afterPath="$PROJECT_DIR$/www/templates/education/detailInstitutEcoJurSoc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailInstitutTechSci.html" afterPath="$PROJECT_DIR$/www/templates/education/detailInstitutTechSci.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/detailUniversity.html" afterPath="$PROJECT_DIR$/www/templates/education/detailUniversity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/ecoleColleg.html" afterPath="$PROJECT_DIR$/www/templates/education/ecoleColleg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/ecoleLyc.html" afterPath="$PROJECT_DIR$/www/templates/education/ecoleLyc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/ecolePrim.html" afterPath="$PROJECT_DIR$/www/templates/education/ecolePrim.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/educationElement.html" afterPath="$PROJECT_DIR$/www/templates/education/educationElement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/institutEcoJurSoc.html" afterPath="$PROJECT_DIR$/www/templates/education/institutEcoJurSoc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/institutTechSci.html" afterPath="$PROJECT_DIR$/www/templates/education/institutTechSci.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/listEcole.html" afterPath="$PROJECT_DIR$/www/templates/education/listEcole.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/education/university.html" afterPath="$PROJECT_DIR$/www/templates/education/university.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/centreSante.html" afterPath="$PROJECT_DIR$/www/templates/sante/centreSante.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/cnss.html" afterPath="$PROJECT_DIR$/www/templates/sante/cnss.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/detailCentreSante.html" afterPath="$PROJECT_DIR$/www/templates/sante/detailCentreSante.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/detailCnss.html" afterPath="$PROJECT_DIR$/www/templates/sante/detailCnss.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/detailDispMed.html" afterPath="$PROJECT_DIR$/www/templates/sante/detailDispMed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/detailHopital.html" afterPath="$PROJECT_DIR$/www/templates/sante/detailHopital.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/detailMedicament.html" afterPath="$PROJECT_DIR$/www/templates/sante/detailMedicament.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/dispMed.html" afterPath="$PROJECT_DIR$/www/templates/sante/dispMed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/hopital.html" afterPath="$PROJECT_DIR$/www/templates/sante/hopital.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/medicament.html" afterPath="$PROJECT_DIR$/www/templates/sante/medicament.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/sante/santeElement.html" afterPath="$PROJECT_DIR$/www/templates/sante/santeElement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/societe/detailLienGov.html" afterPath="$PROJECT_DIR$/www/templates/societe/detailLienGov.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/societe/lienGov.html" afterPath="$PROJECT_DIR$/www/templates/societe/lienGov.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/societe/societeElement.html" afterPath="$PROJECT_DIR$/www/templates/societe/societeElement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/agenceVoy.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/agenceVoy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/detailAgenceVoy.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/detailAgenceVoy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/detailGuideTour.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/detailGuideTour.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/detailHotel.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/detailHotel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/guideTour.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/guideTour.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/hotel.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/hotel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html" afterPath="$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html" />
     </list>
     <ignored path="OpenApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,61 +81,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <file leaf-file-name="agenceVoy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/agenceVoy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="497" column="45" selection-start-line="497" selection-start-column="45" selection-end-line="497" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="14" column="169" selection-start-line="14" selection-start-column="169" selection-end-line="14" selection-end-column="169" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
+      <file leaf-file-name="detailAgenceVoy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailAgenceVoy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+            <state relative-caret-position="345">
+              <caret line="23" column="59" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/services/SearchService.js">
+      <file leaf-file-name="detailGuideTour.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailGuideTour.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="79" column="124" selection-start-line="79" selection-start-column="124" selection-end-line="79" selection-end-column="124" />
+            <state relative-caret-position="315">
+              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="societeController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/societe/societeController.js">
+      <file leaf-file-name="detailHotel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailHotel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            <state relative-caret-position="420">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lienGovController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/societe/lienGovController.js">
+      <file leaf-file-name="guideTour.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/guideTour.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="210">
+              <caret line="14" column="169" selection-start-line="14" selection-start-column="169" selection-end-line="14" selection-end-column="169" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detailLienGov.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/templates/societe/detailLienGov.html">
+      <file leaf-file-name="hotel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/hotel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state relative-caret-position="210">
+              <caret line="14" column="149" selection-start-line="14" selection-start-column="149" selection-end-line="14" selection-end-column="149" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tourismeElement.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="140" selection-start-line="6" selection-start-column="126" selection-end-line="6" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -117,57 +172,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/templates/RD/detailExpert.html" />
-        <option value="$PROJECT_DIR$/www/js/education/cpgeController.js" />
-        <option value="$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html" />
-        <option value="$PROJECT_DIR$/www/templates/sante/santeElement.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/detailTeleServiceId.html" />
+        <option value="$PROJECT_DIR$/www/js/societe/societeController.js" />
+        <option value="$PROJECT_DIR$/www/js/services/SearchService.js" />
+        <option value="$PROJECT_DIR$/www/templates/societe/teleService.html" />
+        <option value="$PROJECT_DIR$/www/js/societe/teleServiceController.js" />
+        <option value="$PROJECT_DIR$/www/templates/societe/detailTeleService.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/centreAppel.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/detailCentreAppel.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/detailLienGov.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/societeElement.html" />
+        <option value="$PROJECT_DIR$/www/templates/societe/lienGov.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/bts.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/cpge.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailBts.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailCpge.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailEcole.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailEcoleColleg.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailEcoleLyc.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailEcolePrim.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailInstitutEcoJurSoc.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailInstitutTechSci.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/detailUniversity.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/ecoleColleg.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/ecoleLyc.html" />
+        <option value="$PROJECT_DIR$/www/templates/education/ecolePrim.html" />
         <option value="$PROJECT_DIR$/www/templates/education/educationElement.html" />
-        <option value="$PROJECT_DIR$/www/templates/RD/rdElement.html" />
-        <option value="$PROJECT_DIR$/www/js/education/educationController.js" />
-        <option value="$PROJECT_DIR$/www/js/sante/santeController.js" />
-        <option value="$PROJECT_DIR$/www/js/tourisme/agenceVoyController.js" />
-        <option value="$PROJECT_DIR$/www/templates/tourisme/detailHotel.html" />
-        <option value="$PROJECT_DIR$/www/js/tourisme/hotelController.js" />
-        <option value="$PROJECT_DIR$/www/js/sante/hopitalController.js" />
-        <option value="$PROJECT_DIR$/www/templates/sante/hopital.html" />
-        <option value="$PROJECT_DIR$/www/js/sante/agenceCnssController.js" />
-        <option value="$PROJECT_DIR$/www/templates/sante/cnss.html" />
-        <option value="$PROJECT_DIR$/www/js/sante/centreSanteController.js" />
-        <option value="$PROJECT_DIR$/www/templates/sante/detailCentreSante.html" />
-        <option value="$PROJECT_DIR$/www/js/education/ecoleCollegController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/btsController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/universityController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/ecoleLycController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/ecolePrimController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/institutEcoJurSoc.js" />
-        <option value="$PROJECT_DIR$/www/js/education/institutTechSciController.js" />
-        <option value="$PROJECT_DIR$/www/js/education/listSchoolController.js" />
-        <option value="$PROJECT_DIR$/www/templates/sante/centreSante.html" />
         <option value="$PROJECT_DIR$/www/templates/education/institutEcoJurSoc.html" />
         <option value="$PROJECT_DIR$/www/templates/education/institutTechSci.html" />
         <option value="$PROJECT_DIR$/www/templates/education/listEcole.html" />
         <option value="$PROJECT_DIR$/www/templates/education/university.html" />
-        <option value="$PROJECT_DIR$/www/templates/education/bts.html" />
-        <option value="$PROJECT_DIR$/www/templates/education/cpge.html" />
-        <option value="$PROJECT_DIR$/www/templates/education/ecolePrim.html" />
-        <option value="$PROJECT_DIR$/www/templates/education/ecoleColleg.html" />
-        <option value="$PROJECT_DIR$/www/templates/education/ecoleLyc.html" />
-        <option value="$PROJECT_DIR$/www/js/RD/chartFsiController.js" />
-        <option value="$PROJECT_DIR$/www/templates/RD/chartFsi.html" />
-        <option value="$PROJECT_DIR$/www/js/RD/chartTatwir.js" />
-        <option value="$PROJECT_DIR$/www/js/RD/rdController.js" />
-        <option value="$PROJECT_DIR$/www/js/RD/chartTatwirController.js" />
-        <option value="$PROJECT_DIR$/www/templates/RD/tatwir.html" />
-        <option value="$PROJECT_DIR$/www/js/societe/societeElement.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/templates/societe/societeElement.html" />
-        <option value="$PROJECT_DIR$/www/templates/menu.html" />
-        <option value="$PROJECT_DIR$/www/js/services/SearchService.js" />
-        <option value="$PROJECT_DIR$/www/templates/societe/lienGov.html" />
-        <option value="$PROJECT_DIR$/www/js/societe/lienGovController.js" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/societe/societeController.js" />
-        <option value="$PROJECT_DIR$/www/templates/societe/detailLienGov.html" />
+        <option value="$PROJECT_DIR$/www/templates/RD/detailExpert.html" />
+        <option value="$PROJECT_DIR$/www/templates/RD/expert.html" />
+        <option value="$PROJECT_DIR$/www/templates/RD/rdElement.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/centreSante.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/cnss.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/detailCentreSante.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/detailCnss.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/detailDispMed.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/detailHopital.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/detailMedicament.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/dispMed.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/medicament.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/hopital.html" />
+        <option value="$PROJECT_DIR$/www/templates/sante/santeElement.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/agenceVoy.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/detailAgenceVoy.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/detailGuideTour.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/detailHotel.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/guideTour.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/hotel.html" />
+        <option value="$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html" />
       </list>
     </option>
   </component>
@@ -284,47 +339,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="societe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="tourisme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -809,7 +842,7 @@
       <workItem from="1461579312219" duration="38640000" />
       <workItem from="1461753802341" duration="3502000" />
       <workItem from="1462177945379" duration="43461000" />
-      <workItem from="1462350251877" duration="35714000" />
+      <workItem from="1462350251877" duration="43377000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1 intellij">
       <created>1461664150115</created>
@@ -902,26 +935,33 @@
       <option name="project" value="LOCAL" />
       <updated>1462463891948</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit societe 1">
+      <created>1462467849621</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1462467849621</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151269000" />
+    <option name="totallyTimeSpent" value="158932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698002" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22914219" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="21" y="445" width="1638" height="289" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698002" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22914219" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="21" y="445" width="1638" height="289" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21367522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -930,14 +970,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -995,7 +1035,8 @@
     <MESSAGE value="sante commit 2" />
     <MESSAGE value="commit localisation update" />
     <MESSAGE value="commit chart RD" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit chart RD" />
+    <MESSAGE value="commit societe 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit societe 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1030,180 +1071,162 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/templates/sante/medicament.html">
+    <entry file="file://$PROJECT_DIR$/www/js/societe/teleServiceController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="10" selection-start-line="14" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="673">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/tourisme/agenceVoyController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/detailLienGov.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        <state relative-caret-position="510">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/tourisme/hotelController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/detailTeleService.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="67" column="39" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailBts.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/societeElement.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="138" selection-start-line="6" selection-start-column="138" selection-end-line="6" selection-end-column="138" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailCpge.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/lienGov.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/cpgeController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/detailCentreAppel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="81" selection-start-line="68" selection-start-column="81" selection-end-line="68" selection-end-column="81" />
+        <state relative-caret-position="390">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/universityController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/teleService.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
-          <folding>
-            <element signature="e#1403#1430#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/ecoleLycController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        <state relative-caret-position="225">
+          <caret line="15" column="90" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcoleColleg.html">
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcoleLyc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/btsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="68" column="26" selection-start-line="68" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcolePrim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/institutEcoJurSoc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="65" column="103" selection-start-line="65" selection-start-column="103" selection-end-line="65" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailInstitutEcoJurSoc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/institutTechSciController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/listSchoolController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="66" column="107" selection-start-line="66" selection-start-column="107" selection-end-line="66" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/educationElement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="373">
+          <caret line="537" column="53" selection-start-line="537" selection-start-column="53" selection-end-line="537" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/education/bts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="10" selection-start-line="13" selection-start-column="3" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="225">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/institutTechSci.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/cpge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="13" selection-start-column="4" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/listEcole.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailBts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="12" selection-start-column="2" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="90">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/university.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailCpge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="10" selection-start-line="13" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="90">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/ecolePrimController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcole.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="28" />
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcoleColleg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcoleLyc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailEcolePrim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailInstitutEcoJurSoc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailUniversity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/ecoleColleg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="93" selection-start-line="14" selection-start-column="93" selection-end-line="14" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/educationElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="153" selection-start-line="5" selection-start-column="153" selection-end-line="5" selection-end-column="153" />
           <folding />
         </state>
       </provider>
@@ -1211,87 +1234,55 @@
     <entry file="file://$PROJECT_DIR$/www/templates/education/institutEcoJurSoc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <caret line="16" column="102" selection-start-line="16" selection-start-column="102" selection-end-line="16" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/sante/centreSante.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/institutTechSci.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="10" selection-start-line="14" selection-start-column="4" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="225">
+          <caret line="15" column="98" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/ecoleColleg.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/listEcole.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="19" selection-end-column="10" />
+        <state relative-caret-position="210">
+          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/education/ecolePrim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="89" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/education/ecoleLyc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/education/ecoleCollegController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/detailInstitutTechSci.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="345">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/cpge.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/education/university.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" selection-start-line="15" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/RD/rdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/chartControllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/RD/chartTatwirController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/RD/chartFsiController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="89" />
           <folding />
         </state>
       </provider>
@@ -1300,154 +1291,190 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="91" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="91" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h6#1;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/RD/detailExpert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/RD/expert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="148" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/RD/rdElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="128" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="128" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/RD/tatwir.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h6#1;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/centreSante.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/cnss.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/detailCentreSante.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/detailCnss.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/detailDispMed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/detailHopital.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/detailMedicament.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="59" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/dispMed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="82" selection-start-line="16" selection-start-column="82" selection-end-line="16" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/medicament.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="88" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/hopital.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/sante/santeElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="134" selection-start-line="6" selection-start-column="134" selection-end-line="6" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/societe/centreAppel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tourisme/agenceVoy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="169" selection-start-line="14" selection-start-column="169" selection-end-line="14" selection-end-column="169" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailAgenceVoy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailGuideTour.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tourisme/detailHotel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tourisme/guideTour.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="169" selection-start-line="14" selection-start-column="169" selection-end-line="14" selection-end-column="169" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/sante/santeController.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/tourisme/hotel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="149" selection-start-line="14" selection-start-column="149" selection-end-line="14" selection-end-column="149" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tourisme/tourismeElement.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/societe/societeElement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/ecolePrim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/education/detailUniversity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/tourisme/guideTourController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="48" column="5" selection-start-line="37" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services/SearchService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="79" column="124" selection-start-line="79" selection-start-column="124" selection-end-line="79" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="497" column="45" selection-start-line="497" selection-start-column="45" selection-end-line="497" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/societe/lienGov.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/societe/societeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/societe/lienGovController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/societe/detailLienGov.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        <state relative-caret-position="90">
+          <caret line="6" column="140" selection-start-line="6" selection-start-column="126" selection-end-line="6" selection-end-column="140" />
           <folding />
         </state>
       </provider>

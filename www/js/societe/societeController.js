@@ -12,8 +12,13 @@ angular.module('starter.societeController', [])
 
 
       {
-        name: "Dispositifs médicaux admis au rembourssement",
-        goTo: "dispMed"
+        name: "Centres d'appels des administrations",
+        goTo: "centreAppel"
+      },
+
+      {
+        name: "Tele-Service",
+        goTo: "teleService"
       }
 
     ];

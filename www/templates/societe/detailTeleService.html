@@ -1,0 +1,47 @@
+<ion-view view-title="Detail Tele-Service">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-home"></i>
+        <h3>{{ teleService["Nom de l'entité"] }}</h3>
+        <h3>{{ teleService["Nom du Télé-Service"] }}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-at"></i>
+        <h3>{{ teleService["Adresse d’accès"] }}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-star"></i>
+        {{ teleService["Description du Télé-Service"]}}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-star-half"></i>
+        Menu ou rubrique sur le site: {{ teleService["Menu ou rubrique sur le site"]}}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-star-outline"></i>
+        Niveau de dématérialisation: {{ teleService["Niveau de dématérialisation"] }}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-medical"></i>
+        Nature du Télé-Service : {{ teleService["Nature du Télé-Service"] }}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-medical-outline"></i>
+        Secteur: {{ teleService.Secteur }}
+      </a>
+    </div>
+
+  </ion-content>
+
+
+</ion-view>

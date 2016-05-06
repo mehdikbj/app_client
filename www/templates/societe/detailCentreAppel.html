@@ -1,0 +1,36 @@
+<ion-view view-title="Detail Centre d'Appel">
+
+  <ion-content>
+
+    <div class="list card">
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-home"></i>
+        <h3>{{ centreAppel["Nom de l'entité"] }} </h3>
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-home"></i>
+        <h3>{{ centreAppel["Nom du centre d'appels"]}}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ios-telephone"></i>
+        {{ centreAppel["Numéro du centre d'appels"] }}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-ribbon-b"></i>
+        Groupe: {{ centreAppel.Groupe}}
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon ion-android-star"></i>
+        Secteur: {{ centreAppel.Secteur }}
+      </a>
+    </div>
+
+  </ion-content>
+
+
+</ion-view>

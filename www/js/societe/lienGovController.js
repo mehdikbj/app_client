@@ -45,7 +45,5 @@ angular.module('starter.lienGovController', [])
       $scope.lienGov= response.data.result.records[0];
       console.log($scope.lienGov);
     });
-
-
-
+    
   });

@@ -80,6 +80,14 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"63f6a4fe-bff7-41b0-8ed9-4d77d3caa817"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getCentreAppelById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"0d3007f4-d0dc-46a3-b7be-2474caf0be20"%20WHERE%20_id%20=%20'+Id);
+      },
+
+      getTeleServiceById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"433c03a2-344a-4877-830b-cd2e4f529e7f"%20WHERE%20_id%20=%20'+Id);
+      },
+
 
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
@@ -180,12 +188,18 @@ angular.module('starter.services')
       searchLienGov: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=63f6a4fe-bff7-41b0-8ed9-4d77d3caa817&q='+search+'&offset=0&limit=142');
 
+      },
+
+      searchCentreAppel: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=0d3007f4-d0dc-46a3-b7be-2474caf0be20&q='+search+'&offset=0&limit=142');
+
+      },
+
+      searchTeleService: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=433c03a2-344a-4877-830b-cd2e4f529e7f&q='+search+'&offset=0&limit=142');
+
       }
-
-
-
-
-
+      
     };
 
     return service;
