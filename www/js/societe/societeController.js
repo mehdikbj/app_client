@@ -19,6 +19,11 @@ angular.module('starter.societeController', [])
       {
         name: "Tele-Service",
         goTo: "teleService"
+      },
+
+      {
+        name: "Population du Maroc par année",
+        goTo: "population"
       }
 
     ];
