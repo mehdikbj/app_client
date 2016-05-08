@@ -11,7 +11,7 @@ angular.module('starter.cartographieController', [])
       },
       {
         name: "Codes postaux des quartiers",
-        goTo: "institutTechSci"
+        goTo: "codPosQua"
       },
 
       {

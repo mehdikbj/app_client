@@ -203,6 +203,11 @@ angular.module('starter.services')
       searchCodPostLoc: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=6cc4dc28-44ca-4b7d-8d7a-580ec196e2f2&q='+search+'&offset=0&limit=142');
 
+      },
+
+      searchCodPosQua: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=699405e0-270f-4fa7-a835-6b40e2e760d8&q='+search+'&offset=0&limit=142');
+
       }
 
     };
