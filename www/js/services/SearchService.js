@@ -198,8 +198,13 @@ angular.module('starter.services')
       searchTeleService: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=433c03a2-344a-4877-830b-cd2e4f529e7f&q='+search+'&offset=0&limit=142');
 
+      },
+
+      searchCodPostLoc: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=6cc4dc28-44ca-4b7d-8d7a-580ec196e2f2&q='+search+'&offset=0&limit=142');
+
       }
-      
+
     };
 
     return service;

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController', 'starter.chartFsiController', 'starter.chartTatwirController', 'starter.lienGovController', 'starter.societeController', 'starter.centreAppelController', 'starter.teleServiceController', 'starter.teleServiceController', 'starter.populationController'])
+angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.geoControllers','starter.geoplacesControllers', 'uiGmapgoogle-maps', 'starter.chartControllers','starter.services', 'starter.listSchoolController','starter.educationController','starter.universityController','starter.institutEcoJurSocController','starter.cpgeController', 'starter.btsController','starter.institutTechSciController', 'starter.ecolePrimController', 'starter.ecoleCollegController','starter.ecoleLycController', 'starter.tourismeController', 'starter.agenceVoyController', 'starter.guideTourController', 'starter.hotelController', 'starter.hopitalController' , 'starter.santeController', 'starter.agenceCnssController', 'starter.centreSanteController', 'starter.medicamentController', 'starter.dispMedController', 'starter.rdController', 'starter.expertController', 'starter.chartFsiController', 'starter.chartTatwirController', 'starter.lienGovController', 'starter.societeController', 'starter.centreAppelController', 'starter.teleServiceController', 'starter.teleServiceController', 'starter.populationController', 'starter.cartographieController', 'starter.codPosLocController'])
 
 
 
@@ -550,6 +550,26 @@ angular.module('starter', ['ionic','chart.js', 'starter.controllers','starter.ge
         'menuContent': {
           templateUrl: 'templates/societe/population.html',
           controller: 'populationCtrl'
+        }
+      }
+    })
+
+    .state('app.cartographieElement', {
+      url: '/cartographie/cartographieElement',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cartographie/cartographieElement.html',
+          controller: 'cartographieListCtrl'
+        }
+      }
+    })
+
+    .state('app.codPosLoc', {
+      url: '/cartographie/codPosLoc',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cartographie/codPosLoc.html',
+          controller: 'codPosLocCtrl'
         }
       }
     })

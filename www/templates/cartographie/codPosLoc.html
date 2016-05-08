@@ -1,0 +1,26 @@
+<ion-view view-title="Codes Postaux Localités">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+    <div class="list">
+
+      <a ng-repeat="codPosLoc in codPosLocs" class="item item-icon-left item-text-wrap" href="#">
+        <i class="icon ion-email"></i>
+        <h3>Région: {{ codPosLoc.REGION_POSTALE }}</h3>
+        <h3>Province: {{ codPosLoc.PROVINCE }} </h3>
+        <h3>Localité: {{ codPosLoc.LOCALITE }} </h3>
+        <h3>Code: {{ codPosLoc.code }} </h3>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>
