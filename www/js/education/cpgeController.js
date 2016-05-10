@@ -51,7 +51,7 @@ angular.module('starter.cpgeController', [])
         latitude: 33.5910948,
         longitude: -7.6137281
       },
-      zoom: 5,
+      zoom: 15,
       control: {}
     };
 
@@ -93,6 +93,10 @@ angular.module('starter.cpgeController', [])
             latitude: results[0].geometry.location.lat()
           }
         };
+
+        $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
+        $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
+
         allMarkercpge.push(marker);
         console.log(allMarkercpge);
 

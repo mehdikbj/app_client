@@ -12,8 +12,7 @@
     </div>
 
     <div class="list">
-
-      <a ng-repeat="posteMaroc in posteMarocs" class="item item-icon-left item-text-wrap" href="#/app/cartographie/detailPosteMaroc/{{posteMaroc._id}}">
+      <a ng-repeat="posteMaroc in posteMarocs" class="item item-icon-left item-text-wrap" href="#/app/cartographie/detailPosteMaroc/{{posteMaroc._id}}" ng-click="show()">
         <i class="icon ion-university"></i>
         <h3>{{ posteMaroc.RESEAU }}</h3>
         <h3>{{ posteMaroc.NOM_REGION }} </h3>

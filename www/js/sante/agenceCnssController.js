@@ -45,7 +45,7 @@ angular.module('starter.agenceCnssController', [])
         latitude: 33.5910948,
         longitude: -7.6137281
       },
-      zoom: 5,
+      zoom: 15,
       control: {}
     };
 
@@ -85,6 +85,8 @@ angular.module('starter.agenceCnssController', [])
               latitude: results[0].geometry.location.lat()
             }
           };
+          $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
+          $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerCnss.push(marker);
           // console.log(allMarkerUniversity);
           // console.log(request);

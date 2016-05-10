@@ -51,14 +51,13 @@ angular.module('starter.hotelController', [])
         latitude: 33.5910948,
         longitude: -7.6137281
       },
-      zoom: 5,
+      zoom: 15,
       control: {}
     };
 
 
     SearchService.getHotelById($stateParams.hotelId).then(function(response){
       $scope.hotel= response.data.result.records[0];
-      console.log($scope.hotel);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -91,7 +90,8 @@ angular.module('starter.hotelController', [])
               latitude: results[0].geometry.location.lat()
             }
         };
-          console.log(marker);
+          $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
+          $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerHotel.push(marker);
           // console.log(allMarkerUniversity);
           // console.log(request);

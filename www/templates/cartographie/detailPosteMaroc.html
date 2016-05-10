@@ -1,7 +1,6 @@
 <ion-view view-title="Detail Poste Maroc">
 
   <ion-content>
-
     <div class="list card">
 
       <a href="#" class="item item-icon-left item-text-wrap">
@@ -34,15 +33,14 @@
 
 
 
-    <div>
 
+    <div>
 
       <ui-gmap-google-map center='maps.center' zoom='maps.zoom'>
         <ui-gmap-marker ng-repeat="m in myMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
       </ui-gmap-google-map>
 
     </div>
-
 
   </ion-content>
 

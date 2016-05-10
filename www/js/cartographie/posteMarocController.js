@@ -6,7 +6,7 @@ angular.module('starter.posteMarocController', [])
       console.log(searchTxt);
       var allposteMaroc = [];
       $ionicLoading.show();
-      
+
       SearchService.searchPosteMaroc(searchTxt).then(function (response) {
         data = response.data.result.records;
         // console.log(data);
@@ -37,12 +37,13 @@ angular.module('starter.posteMarocController', [])
   })
 
 
-  .controller('posteMarocDetailCtrl',  function($scope, $http, $stateParams, SearchService, $ionicLoading){
+  .controller('posteMarocDetailCtrl',  function($scope, $http, $stateParams, SearchService){
 
-    $scope.maps = { center: { latitude: 33.5910948, longitude: -7.6137281 }, zoom: 5 };
+
+    // $scope.maps = { center: { latitude: 33.5910948, longitude: -7.6137281 }, zoom: 10 };
 
     SearchService.getPosteMarocById($stateParams.posteMarocId).then(function(response){
-      $ionicLoading.show();
+      $scope.maps = { center: { latitude: response.data.result.records[0].XY, longitude: response.data.result.records[0].XX }, zoom: 15 };
       var allMarker=[];
       $scope.posteMaroc= response.data.result.records[0];
       $scope.myMarkers = allMarker;
@@ -53,7 +54,6 @@ angular.module('starter.posteMarocController', [])
           latitude: response.data.result.records[0].XY
         }
       };
-      $ionicLoading.hide();
       allMarker.push(marker);
     });
 

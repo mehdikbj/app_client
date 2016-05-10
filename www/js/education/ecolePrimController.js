@@ -48,7 +48,7 @@ angular.module('starter.ecolePrimController', [])
         latitude: 33.5910948,
         longitude: -7.6137281
       },
-      zoom: 5,
+      zoom: 15,
       control: {}
     };
 
@@ -89,6 +89,9 @@ angular.module('starter.ecolePrimController', [])
               latitude: results[0].geometry.location.lat()
             }
           };
+
+          $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
+          $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerEcolePrim.push(marker);
           console.log(allMarkerEcolePrim);
 
