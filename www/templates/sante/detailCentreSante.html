@@ -16,7 +16,8 @@
       </a>
 
     </div>
-    <div class="card">
+
+    <div class="card" style="height:400px;">
     <div>
       <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
         <ui-gmap-marker  ng-repeat="m in allMarkerCentreSante" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
