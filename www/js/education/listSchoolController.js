@@ -1,12 +1,13 @@
 angular.module('starter.listSchoolController', [])
 
-.controller('listItemCtrl', function($scope, $http, SearchService) {
+.controller('listItemCtrl', function($scope, $http, SearchService, $ionicLoading) {
   $scope.searchTxt='';
 
 
   $scope.doSearch= function (searchTxt) {
     console.log(searchTxt);
     var allItems = [];
+    $ionicLoading.show();
     SearchService.searchSchool(searchTxt).then(function(response){
 
       data= response.data.result.records;
@@ -28,7 +29,7 @@ angular.module('starter.listSchoolController', [])
 
         allItems.push(item);
       }
-
+      $ionicLoading.hide();
       $scope.items = allItems;
 
     });

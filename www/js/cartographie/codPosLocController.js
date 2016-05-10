@@ -1,12 +1,14 @@
 angular.module('starter.codPosLocController', [])
 
-  .controller('codPosLocCtrl', function($scope, $http, SearchService) {
+  .controller('codPosLocCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allLienGov = [];
+      $ionicLoading.show();
+
       SearchService.searchCodPostLoc(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -24,6 +26,7 @@ angular.module('starter.codPosLocController', [])
 
           allLienGov.push(codPosLoc);
         }
+        $ionicLoading.hide();
         $scope.codPosLocs = allLienGov;
       });
     };

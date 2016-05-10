@@ -1,12 +1,14 @@
 angular.module('starter.centreSanteController', [])
 
-  .controller('centreSanteCtrl', function($scope, $http, SearchService) {
+  .controller('centreSanteCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allCentreSante = [];
+      $ionicLoading.show();
+
       SearchService.searchCentreSante(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -24,6 +26,7 @@ angular.module('starter.centreSanteController', [])
 
           allCentreSante.push(centreSante);
         }
+        $ionicLoading.hide();
         $scope.centreSantes = allCentreSante;
 
       });

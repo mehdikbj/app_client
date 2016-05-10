@@ -1,12 +1,14 @@
 angular.module('starter.medicamentController', [])
 
-  .controller('medicamentCtrl', function($scope, $http, SearchService) {
+  .controller('medicamentCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allMedicament = [];
+      $ionicLoading.show();
+
       SearchService.searchMedicament(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -33,6 +35,7 @@ angular.module('starter.medicamentController', [])
 
           allMedicament.push(medicament);
         }
+        $ionicLoading.hide();
         $scope.medicaments = allMedicament;
 
       });
@@ -45,7 +48,7 @@ angular.module('starter.medicamentController', [])
 
 
   .controller('medicamentDetailCtrl',  function($scope, $http, $stateParams, SearchService){
-    
+
     SearchService.getMedicamentById($stateParams.medicamentId).then(function(response){
       $scope.medicament= response.data.result.records[0];
       console.log($scope.medicament);

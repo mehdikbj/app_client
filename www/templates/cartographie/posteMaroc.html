@@ -1,4 +1,4 @@
-<ion-view view-title="Codes Postaux Localités">
+<ion-view view-title="Liste des agences de Poste Maroc avec coordonnées spatiales">
 
   <ion-content>
 
@@ -13,11 +13,10 @@
 
     <div class="list">
 
-      <a ng-repeat="codPosQua in codPosQuas" class="item item-icon-left item-text-wrap" >
-        <i class="icon ion-email"></i>
-        <h3>Région: {{ codPosQua.Ville }}</h3>
-        <h3>Province: {{ codPosQua.Quartiers }} </h3>
-        <h3>Localité: {{ codPosQua.code}} </h3>
+      <a ng-repeat="posteMaroc in posteMarocs" class="item item-icon-left item-text-wrap" href="#/app/cartographie/detailPosteMaroc/{{posteMaroc._id}}">
+        <i class="icon ion-university"></i>
+        <h3>{{ posteMaroc.RESEAU }}</h3>
+        <h3>{{ posteMaroc.NOM_REGION }} </h3>
       </a>
     </div>
 

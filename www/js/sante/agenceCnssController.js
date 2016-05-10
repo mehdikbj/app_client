@@ -1,12 +1,14 @@
 angular.module('starter.agenceCnssController', [])
 
-  .controller('agenceCnssCtrl', function($scope, $http, SearchService) {
+  .controller('agenceCnssCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allAgenceCnss = [];
+      $ionicLoading.show();
+
       SearchService.searchAgenceCnss(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -22,6 +24,7 @@ angular.module('starter.agenceCnssController', [])
 
           allAgenceCnss.push(agenceCnss);
         }
+        $ionicLoading.hide();
         $scope.agenceCnsss = allAgenceCnss;
 
       });

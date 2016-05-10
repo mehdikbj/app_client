@@ -1,12 +1,14 @@
 angular.module('starter.ecoleCollegController', [])
 
-  .controller('ecoleCollegCtrl', function($scope, $http, SearchService) {
+  .controller('ecoleCollegCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allEcoleCollegs = [];
+      $ionicLoading.show();
+
       SearchService.searchEcoleColleg(searchTxt).then(function(response){
 
         data= response.data.result.records;
@@ -25,7 +27,7 @@ angular.module('starter.ecoleCollegController', [])
 
           allEcoleCollegs.push(ecoleColleg);
         }
-
+        $ionicLoading.hide();
         $scope.allEcoleCollegs = allEcoleCollegs;
 
       });

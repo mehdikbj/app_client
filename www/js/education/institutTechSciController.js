@@ -1,12 +1,12 @@
 angular.module('starter.institutTechSciController', [])
 
-  .controller('institutTechSciCtrl', function($scope, $http, SearchService) {
+  .controller('institutTechSciCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allInstitutTechSci = [];
-
+      $ionicLoading.show();
 
       SearchService.searchInstitutTechSci(searchTxt).then(function (response) {
 
@@ -27,6 +27,7 @@ angular.module('starter.institutTechSciController', [])
 
           allInstitutTechSci.push(institutTechSci);
         }
+        $ionicLoading.hide();
         $scope.institutTechScis = allInstitutTechSci;
 
 

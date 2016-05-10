@@ -13,10 +13,10 @@ angular.module('starter.cartographieController', [])
         name: "Codes postaux des quartiers",
         goTo: "codPosQua"
       },
-
+      
       {
-        name: "Les Universités Marocaines",
-        goTo: "university"
+        name: "Liste des agences de Poste Maroc avec coordonnées spatiales",
+        goTo: "posteMaroc"
       }
 
     ];

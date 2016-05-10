@@ -1,11 +1,11 @@
 angular.module('starter.btsController', [])
 
-  .controller('btsCtrl', function($scope, $http, SearchService) {
+  .controller('btsCtrl', function($scope, $http, SearchService, $ionicLoading) {
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allbts = [];
-
+      $ionicLoading.show();
 
       SearchService.searchBts(searchTxt).then(function (response) {
 
@@ -29,6 +29,7 @@ angular.module('starter.btsController', [])
 
           allbts.push(bts);
         }
+        $ionicLoading.hide();
         $scope.btss = allbts;
 
 

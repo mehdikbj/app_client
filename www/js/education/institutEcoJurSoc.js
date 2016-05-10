@@ -1,11 +1,11 @@
 angular.module('starter.institutEcoJurSocController', [])
 
-  .controller('institutEcoJurSocCtrl', function($scope, $http, SearchService) {
+  .controller('institutEcoJurSocCtrl', function($scope, $http, SearchService, $ionicLoading) {
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allInstitutEcoJurSoc = [];
-
+      $ionicLoading.show();
 
       SearchService.searchInstitutEcoJurSoc(searchTxt).then(function (response) {
 
@@ -27,6 +27,7 @@ angular.module('starter.institutEcoJurSocController', [])
           allInstitutEcoJurSoc.push(institutEcoJurSoc);
           // console.log(allInstitutEcoJurSoc);
         }
+        $ionicLoading.hide();
         $scope.institutEcoJurSocs = allInstitutEcoJurSoc;
 
 

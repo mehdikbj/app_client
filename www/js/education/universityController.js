@@ -1,12 +1,14 @@
 angular.module('starter.universityController', [])
 
-  .controller('listUniversityCtrl', function($scope, $http, SearchService) {
+  .controller('listUniversityCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allUniversity = [];
+      $ionicLoading.show();
+
       SearchService.searchUniversity(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -26,6 +28,7 @@ angular.module('starter.universityController', [])
 
           allUniversity.push(university);
         }
+        $ionicLoading.hide();
         $scope.universities = allUniversity;
 
       });

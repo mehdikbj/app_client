@@ -88,6 +88,10 @@ angular.module('starter.services')
         return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"433c03a2-344a-4877-830b-cd2e4f529e7f"%20WHERE%20_id%20=%20'+Id);
       },
 
+      getPosteMarocById: function (Id) {
+        return CkanHttp.get( '/api/action/datastore_search_sql?sql=SELECT%20*%20from%20"61928174-ca28-4331-9eb2-b344cc20db23"%20WHERE%20_id%20=%20'+Id);
+      },
+
 
       searchSchool: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=8d3a66f8-1ea4-426d-8ada-ca5c12612ba4&q='+search+'&offset=0&limit=700');
@@ -207,6 +211,11 @@ angular.module('starter.services')
 
       searchCodPosQua: function (search) {
         return CkanHttp.get( '/api/action/datastore_search?resource_id=699405e0-270f-4fa7-a835-6b40e2e760d8&q='+search+'&offset=0&limit=142');
+
+      },
+
+      searchPosteMaroc: function (search) {
+        return CkanHttp.get( '/api/action/datastore_search?resource_id=61928174-ca28-4331-9eb2-b344cc20db23&q='+search+'&offset=0&limit=142');
 
       }
 

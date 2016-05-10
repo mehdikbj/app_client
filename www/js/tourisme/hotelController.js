@@ -1,12 +1,14 @@
 angular.module('starter.hotelController', [])
 
-  .controller('hotelCtrl', function($scope, $http, SearchService) {
+  .controller('hotelCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allHotel = [];
+      $ionicLoading.show();
+
       SearchService.searchHotel(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -28,6 +30,7 @@ angular.module('starter.hotelController', [])
 
           allHotel.push(hotel);
         }
+        $ionicLoading.hide();
         $scope.hotels = allHotel;
 
       });

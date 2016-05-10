@@ -1,12 +1,14 @@
 angular.module('starter.dispMedController', [])
 
-  .controller('dispMedCtrl', function($scope, $http, SearchService) {
+  .controller('dispMedCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allDispMed = [];
+      $ionicLoading.show();
+
       SearchService.searchDispMed(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -23,6 +25,7 @@ angular.module('starter.dispMedController', [])
 
           allDispMed.push(dispMed);
         }
+        $ionicLoading.hide();
         $scope.dispMeds = allDispMed;
 
       });

@@ -1,12 +1,14 @@
 angular.module('starter.agenceVoyController', [])
 
-  .controller('agenceVoyCtrl', function($scope, $http, SearchService) {
+  .controller('agenceVoyCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allAgenceVoy = [];
+      $ionicLoading.show();
+
       SearchService.searchAgenceVoy(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -25,6 +27,7 @@ angular.module('starter.agenceVoyController', [])
 
           allAgenceVoy.push(agenceVoy);
         }
+        $ionicLoading.hide();
         $scope.agenceVoys = allAgenceVoy;
 
       });

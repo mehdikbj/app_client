@@ -1,11 +1,12 @@
 angular.module('starter.cpgeController', [])
 
-  .controller('cpgeCtrl', function($scope, $http, SearchService) {
+  .controller('cpgeCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allcpge = [];
+      $ionicLoading.show();
 
       SearchService.searchCpge(searchTxt).then(function (response) {
 
@@ -29,6 +30,7 @@ angular.module('starter.cpgeController', [])
 
           allcpge.push(cpge);
         }
+        $ionicLoading.hide();
         $scope.cpges = allcpge;
 
 

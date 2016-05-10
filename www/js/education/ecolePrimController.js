@@ -1,12 +1,14 @@
 angular.module('starter.ecolePrimController', [])
 
-  .controller('ecolePrimCtrl', function($scope, $http, SearchService) {
+  .controller('ecolePrimCtrl', function($scope, $http, SearchService,$ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allEcolePrims = [];
+      $ionicLoading.show();
+
       SearchService.searchEcolePrim(searchTxt).then(function(response){
 
         data= response.data.result.records;
@@ -25,7 +27,7 @@ angular.module('starter.ecolePrimController', [])
 
           allEcolePrims.push(ecolePrim);
         }
-
+        $ionicLoading.hide();
         $scope.allEcolePrims = allEcolePrims;
 
       });

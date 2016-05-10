@@ -1,12 +1,14 @@
 angular.module('starter.hopitalController', [])
 
-  .controller('hopitalCtrl', function($scope, $http, SearchService) {
+  .controller('hopitalCtrl', function($scope, $http, SearchService, $ionicLoading) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
       console.log(searchTxt);
       var allHopital = [];
+      $ionicLoading.show();
+
       SearchService.searchHopital(searchTxt).then(function (response) {
 
         data = response.data.result.records;
@@ -26,6 +28,7 @@ angular.module('starter.hopitalController', [])
 
           allHopital.push(hopital);
         }
+        $ionicLoading.hide();
         $scope.hopitals = allHopital;
 
       });
