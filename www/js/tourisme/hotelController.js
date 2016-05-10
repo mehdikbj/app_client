@@ -42,7 +42,12 @@ angular.module('starter.hotelController', [])
   })
 
 
-  .controller('hotelDetailCtrl',  function($scope, $http, $stateParams, SearchService){
+  .controller('hotelDetailCtrl',  function($scope, $http, $stateParams, SearchService, $ionicScrollDelegate){
+
+    $scope.scrollTop = function() {
+      $ionicScrollDelegate.scrollTop();
+    };
+    
     var map;
     $scope.allMarkerHotel = [];
 
@@ -51,6 +56,7 @@ angular.module('starter.hotelController', [])
         latitude: 33.5910948,
         longitude: -7.6137281
       },
+      scrollwheel: false,
       zoom: 15,
       control: {}
     };

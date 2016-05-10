@@ -1,6 +1,6 @@
 <ion-view view-title="Detail Hotel">
 
-  <ion-content>
+  <ion-content >
 
     <div class="list card">
 
@@ -33,20 +33,15 @@
 
     </div>
 
-
-
     <div class="card" style="height:400px;">
 
-
-      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control">
+      <ui-gmap-google-map center='mapConfig.center' zoom='mapConfig.zoom' control="mapConfig.control" scroll="false" data-tap-disabled="true">
         <ui-gmap-marker  ng-repeat="m in allMarkerHotel" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
       </ui-gmap-google-map>
 
     </div>
 
-
   </ion-content>
-
 
 </ion-view>
 
