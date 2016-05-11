@@ -1,18 +1,15 @@
 angular.module('starter.agenceCnssController', [])
 
-  .controller('agenceCnssCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('agenceCnssCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allAgenceCnss = [];
-      $ionicLoading.show();
 
       SearchService.searchAgenceCnss(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var agenceCnss = {
@@ -24,7 +21,6 @@ angular.module('starter.agenceCnssController', [])
 
           allAgenceCnss.push(agenceCnss);
         }
-        $ionicLoading.hide();
         $scope.agenceCnsss = allAgenceCnss;
 
       });
@@ -52,7 +48,6 @@ angular.module('starter.agenceCnssController', [])
 
     SearchService.getAgenceCnssById($stateParams.cnssId).then(function(response){
       $scope.cnss= response.data.result.records[0];
-      console.log($scope.cnss);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -68,7 +63,6 @@ angular.module('starter.agenceCnssController', [])
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerCnss =  allMarkerCnss;
 
         var request = {
@@ -88,8 +82,7 @@ angular.module('starter.agenceCnssController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerCnss.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

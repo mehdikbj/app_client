@@ -1,13 +1,11 @@
 angular.module('starter.ecoleCollegController', [])
 
-  .controller('ecoleCollegCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('ecoleCollegCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allEcoleCollegs = [];
-      $ionicLoading.show();
 
       SearchService.searchEcoleColleg(searchTxt).then(function(response){
 
@@ -27,7 +25,6 @@ angular.module('starter.ecoleCollegController', [])
 
           allEcoleCollegs.push(ecoleColleg);
         }
-        $ionicLoading.hide();
         $scope.allEcoleCollegs = allEcoleCollegs;
 
       });
@@ -55,7 +52,6 @@ angular.module('starter.ecoleCollegController', [])
 
     SearchService.getEcoleCollegById($stateParams.ecoleCollegId).then(function(response){
       $scope.ecoleColleg= response.data.result.records[0];
-      console.log($scope.ecoleColleg);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -90,7 +86,6 @@ angular.module('starter.ecoleCollegController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerEcoleColleg.push(marker);
-          console.log(allMarkerEcoleColleg);
 
         })
         });

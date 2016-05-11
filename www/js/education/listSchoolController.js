@@ -1,13 +1,11 @@
 angular.module('starter.listSchoolController', [])
 
-.controller('listItemCtrl', function($scope, $http, SearchService, $ionicLoading) {
+.controller('listItemCtrl', function($scope, $http, SearchService) {
   $scope.searchTxt='';
 
 
   $scope.doSearch= function (searchTxt) {
-    console.log(searchTxt);
     var allItems = [];
-    $ionicLoading.show();
     SearchService.searchSchool(searchTxt).then(function(response){
 
       data= response.data.result.records;
@@ -29,7 +27,6 @@ angular.module('starter.listSchoolController', [])
 
         allItems.push(item);
       }
-      $ionicLoading.hide();
       $scope.items = allItems;
 
     });
@@ -56,7 +53,6 @@ angular.module('starter.listSchoolController', [])
 
   SearchService.getDataById($stateParams.ecoleId).then(function(response){
     $scope.ecole= response.data.result.records[0];
-    console.log($scope.ecole);
   });
 
   $scope.$on("$ionicView.enter", function(event, data){
@@ -79,7 +75,6 @@ angular.module('starter.listSchoolController', [])
         radius: '500',
         query: findInMap
       };
-      console.log('ici');
 
 
       GMapService.textSearch(request, function (results, status){
@@ -93,7 +88,6 @@ angular.module('starter.listSchoolController', [])
         $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
         $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
         allMarkerEcole.push(marker);
-        console.log(allMarkerEcole);
 
       })
       });

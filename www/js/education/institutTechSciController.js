@@ -1,12 +1,10 @@
 angular.module('starter.institutTechSciController', [])
 
-  .controller('institutTechSciCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('institutTechSciCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allInstitutTechSci = [];
-      $ionicLoading.show();
 
       SearchService.searchInstitutTechSci(searchTxt).then(function (response) {
 
@@ -27,7 +25,6 @@ angular.module('starter.institutTechSciController', [])
 
           allInstitutTechSci.push(institutTechSci);
         }
-        $ionicLoading.hide();
         $scope.institutTechScis = allInstitutTechSci;
 
 
@@ -89,8 +86,7 @@ angular.module('starter.institutTechSciController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerInstitutTechSci.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

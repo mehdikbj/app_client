@@ -1,18 +1,15 @@
 angular.module('starter.agenceVoyController', [])
 
-  .controller('agenceVoyCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('agenceVoyCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allAgenceVoy = [];
-      $ionicLoading.show();
 
       SearchService.searchAgenceVoy(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var agenceVoy = {
@@ -27,7 +24,6 @@ angular.module('starter.agenceVoyController', [])
 
           allAgenceVoy.push(agenceVoy);
         }
-        $ionicLoading.hide();
         $scope.agenceVoys = allAgenceVoy;
 
       });
@@ -62,7 +58,6 @@ angular.module('starter.agenceVoyController', [])
 
     SearchService.getAgenceVoyById($stateParams.agenceVoyId).then(function(response){
       $scope.agenceVoy= response.data.result.records[0];
-      // console.log($scope.university.Nom);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -73,12 +68,10 @@ angular.module('starter.agenceVoyController', [])
 
       SearchService.getAgenceVoyById($stateParams.agenceVoyId).then(function(response){
         var findInMap=  response.data.result.records[0]['Raison Sociale'] + ' '+response.data.result.records[0].Ville
-        console.log(findInMap);
         var allMarkerAgenceVoy = [];
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerAgenceVoy =  allMarkerAgenceVoy;
 
         var request = {
@@ -98,8 +91,7 @@ angular.module('starter.agenceVoyController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerAgenceVoy.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

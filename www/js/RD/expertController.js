@@ -1,18 +1,15 @@
 angular.module('starter.expertController', [])
 
-  .controller('expertCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('expertCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allExpert = [];
-      $ionicLoading.show();
 
       SearchService.searchExpert(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var expert = {
@@ -27,7 +24,6 @@ angular.module('starter.expertController', [])
 
           allExpert.push(expert);
         }
-        $ionicLoading.hide();
         $scope.experts = allExpert;
 
       });
@@ -44,7 +40,6 @@ angular.module('starter.expertController', [])
 
     SearchService.getExpertById($stateParams.expertId).then(function(response){
       $scope.expert= response.data.result.records[0];
-      console.log($scope.expert);
     });
 
 

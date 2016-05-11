@@ -1,18 +1,15 @@
 angular.module('starter.hopitalController', [])
 
-  .controller('hopitalCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('hopitalCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allHopital = [];
-      $ionicLoading.show();
 
       SearchService.searchHopital(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var hopital = {
@@ -28,7 +25,6 @@ angular.module('starter.hopitalController', [])
 
           allHopital.push(hopital);
         }
-        $ionicLoading.hide();
         $scope.hopitals = allHopital;
 
       });
@@ -67,13 +63,11 @@ angular.module('starter.hopitalController', [])
 
       SearchService.getHopitalById($stateParams.hopitalId).then(function(response){
         var findInMap=  'hopital' +' '+ response.data.result.records[0]["Nom de l'hôpital"]+' ' + response.data.result.records[0]["ville /commue d'implantation de l'hôpital"];
-        console.log(findInMap);
 
         var allMarkerHopital = [];
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerHopital =  allMarkerHopital;
 
         var request = {
@@ -93,8 +87,7 @@ angular.module('starter.hopitalController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerHopital.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

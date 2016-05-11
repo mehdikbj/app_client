@@ -1,13 +1,11 @@
 angular.module('starter.ecoleLycController', [])
 
-  .controller('ecoleLycCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('ecoleLycCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allEcoleLycs = [];
-      $ionicLoading.show();
 
       SearchService.searchEcoleLyc(searchTxt).then(function(response){
 
@@ -27,7 +25,6 @@ angular.module('starter.ecoleLycController', [])
 
           allEcoleLycs.push(ecoleLyc);
         }
-        $ionicLoading.hide();
         $scope.allEcoleLycs = allEcoleLycs;
 
       });
@@ -55,7 +52,6 @@ angular.module('starter.ecoleLycController', [])
 
     SearchService.getEcoleLycById($stateParams.ecoleLycId).then(function(response){
       $scope.ecoleLyc= response.data.result.records[0];
-      console.log($scope.ecoleLyc);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -65,7 +61,6 @@ angular.module('starter.ecoleLycController', [])
     function  initialize () {
       SearchService.getEcoleLycById($stateParams.ecoleLycId).then(function(response){
         var findInMap =  response.data.result.records[0].NOM_ETABLISSENTFR + ' '+response.data.result.records[0].PROVINCE;
-        console.log(findInMap);
         var allMarkerEcoleLyc = [];
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
@@ -91,7 +86,6 @@ angular.module('starter.ecoleLycController', [])
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
 
           allMarkerEcoleLyc.push(marker);
-          console.log(allMarkerEcoleLyc);
 
         })
         });

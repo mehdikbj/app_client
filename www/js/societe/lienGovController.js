@@ -1,18 +1,15 @@
 angular.module('starter.lienGovController', [])
 
-  .controller('lienGovCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('lienGovCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allLienGov = [];
-      $ionicLoading.show();
 
       SearchService.searchLienGov(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var lienGov = {
@@ -29,7 +26,6 @@ angular.module('starter.lienGovController', [])
 
           allLienGov.push(lienGov);
         }
-        $ionicLoading.hide();
         $scope.lienGovs = allLienGov;
 
       });
@@ -46,7 +42,6 @@ angular.module('starter.lienGovController', [])
 
     SearchService.getLienGovById($stateParams.lienGovId).then(function(response){
       $scope.lienGov= response.data.result.records[0];
-      console.log($scope.lienGov);
     });
 
   });

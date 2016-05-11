@@ -1,12 +1,10 @@
 angular.module('starter.cpgeController', [])
 
-  .controller('cpgeCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('cpgeCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allcpge = [];
-      $ionicLoading.show();
 
       SearchService.searchCpge(searchTxt).then(function (response) {
 
@@ -30,7 +28,6 @@ angular.module('starter.cpgeController', [])
 
           allcpge.push(cpge);
         }
-        $ionicLoading.hide();
         $scope.cpges = allcpge;
 
 
@@ -58,7 +55,6 @@ angular.module('starter.cpgeController', [])
 
     SearchService.getCpgeById($stateParams.cpgeId).then(function(response){
       $scope.cpge= response.data.result.records[0];
-      // console.log($scope.university.Nom);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -69,7 +65,6 @@ angular.module('starter.cpgeController', [])
 
       SearchService.getCpgeById($stateParams.cpgeId).then(function(response){
         var findInMap=  response.data.result.records[0]["NOM ETABLISSEMENT"] + ' '+ response.data.result.records[0].VILLE ;
-        console.log(findInMap);
 
       var allMarkercpge = [];
       map = $scope.mapConfig.control.getGMap();
@@ -83,7 +78,6 @@ angular.module('starter.cpgeController', [])
         query: findInMap
       };
 
-        console.log(request);
 
       GMapService.textSearch(request, function (results, status){
         var marker = {
@@ -98,10 +92,7 @@ angular.module('starter.cpgeController', [])
         $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
 
         allMarkercpge.push(marker);
-        console.log(allMarkercpge);
-
-        // console.log(allMarkerUniversity);
-        // console.log(request);
+        
 
       })
       });

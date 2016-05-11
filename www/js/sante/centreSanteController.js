@@ -1,18 +1,15 @@
 angular.module('starter.centreSanteController', [])
 
-  .controller('centreSanteCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('centreSanteCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allCentreSante = [];
-      $ionicLoading.show();
 
       SearchService.searchCentreSante(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var centreSante = {
@@ -26,7 +23,6 @@ angular.module('starter.centreSanteController', [])
 
           allCentreSante.push(centreSante);
         }
-        $ionicLoading.hide();
         $scope.centreSantes = allCentreSante;
 
       });
@@ -54,7 +50,6 @@ angular.module('starter.centreSanteController', [])
 
     SearchService.getCentreSanteById($stateParams.centreSanteId).then(function(response){
       $scope.centreSante= response.data.result.records[0];
-      console.log($scope.centreSante);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -70,7 +65,6 @@ angular.module('starter.centreSanteController', [])
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerCentreSante =  allMarkerCentreSante;
 
         var request = {
@@ -90,8 +84,7 @@ angular.module('starter.centreSanteController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerCentreSante.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

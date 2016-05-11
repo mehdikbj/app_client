@@ -1,15 +1,12 @@
 angular.module('starter.posteMarocController', [])
 
-  .controller('posteMarocCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('posteMarocCtrl', function($scope, $http, SearchService) {
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allposteMaroc = [];
-      $ionicLoading.show();
 
       SearchService.searchPosteMaroc(searchTxt).then(function (response) {
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var posteMaroc = {
@@ -26,7 +23,6 @@ angular.module('starter.posteMarocController', [])
 
           allposteMaroc.push(posteMaroc);
         }
-        $ionicLoading.hide();
         $scope.posteMarocs = allposteMaroc;
 
       });

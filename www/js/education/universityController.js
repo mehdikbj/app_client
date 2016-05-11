@@ -1,18 +1,15 @@
 angular.module('starter.universityController', [])
 
-  .controller('listUniversityCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('listUniversityCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allUniversity = [];
-      $ionicLoading.show();
 
       SearchService.searchUniversity(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var university = {
@@ -28,7 +25,6 @@ angular.module('starter.universityController', [])
 
           allUniversity.push(university);
         }
-        $ionicLoading.hide();
         $scope.universities = allUniversity;
 
       });
@@ -76,7 +72,6 @@ angular.module('starter.universityController', [])
           radius: '500',
           query: findInMap
         };
-        console.log(request);
 
         GMapService.textSearch(request, function (results, status){
           var marker = {

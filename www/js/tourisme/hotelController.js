@@ -1,18 +1,15 @@
 angular.module('starter.hotelController', [])
 
-  .controller('hotelCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('hotelCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allHotel = [];
-      $ionicLoading.show();
 
       SearchService.searchHotel(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var hotel = {
@@ -30,7 +27,6 @@ angular.module('starter.hotelController', [])
 
           allHotel.push(hotel);
         }
-        $ionicLoading.hide();
         $scope.hotels = allHotel;
 
       });
@@ -79,7 +75,6 @@ angular.module('starter.hotelController', [])
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerHotel =  allMarkerHotel;
 
         var request = {
@@ -99,8 +94,7 @@ angular.module('starter.hotelController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerHotel.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

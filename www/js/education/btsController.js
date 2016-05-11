@@ -1,16 +1,13 @@
 angular.module('starter.btsController', [])
 
-  .controller('btsCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('btsCtrl', function($scope, $http, SearchService) {
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allbts = [];
-      $ionicLoading.show();
 
       SearchService.searchBts(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var bts = {
@@ -29,7 +26,6 @@ angular.module('starter.btsController', [])
 
           allbts.push(bts);
         }
-        $ionicLoading.hide();
         $scope.btss = allbts;
 
 
@@ -57,7 +53,7 @@ angular.module('starter.btsController', [])
 
     SearchService.getBtsById($stateParams.btsId).then(function(response){
       $scope.bts= response.data.result.records[0];
-      // console.log($scope.university.Nom);
+
     });
 
     $scope.$on("$ionicView.enter", function(event, data){

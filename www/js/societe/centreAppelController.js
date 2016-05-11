@@ -1,18 +1,15 @@
 angular.module('starter.centreAppelController', [])
 
-  .controller('centreAppelCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('centreAppelCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allCentreAppel = [];
-      $ionicLoading.show();
 
       SearchService.searchCentreAppel(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var centreAppel = {
@@ -26,7 +23,6 @@ angular.module('starter.centreAppelController', [])
 
           allCentreAppel.push(centreAppel);
         }
-        $ionicLoading.hide();
         $scope.centreAppels = allCentreAppel;
 
       });
@@ -44,7 +40,6 @@ angular.module('starter.centreAppelController', [])
 
     SearchService.getCentreAppelById($stateParams.centreAppelId).then(function(response){
       $scope.centreAppel= response.data.result.records[0];
-      console.log($stateParams.centreAppelId);
     });
 
   });

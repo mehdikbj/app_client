@@ -1,18 +1,15 @@
 angular.module('starter.guideTourController', [])
 
-  .controller('guideTourCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('guideTourCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allGuideTour = [];
-      $ionicLoading.show();
 
       SearchService.searchGuideTour(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var guideTour = {
@@ -27,7 +24,6 @@ angular.module('starter.guideTourController', [])
 
           allGuideTour.push(guideTour);
         }
-        $ionicLoading.hide();
         $scope.guideTours = allGuideTour;
 
       });
@@ -44,7 +40,6 @@ angular.module('starter.guideTourController', [])
 
     SearchService.getGuideTourById($stateParams.guideTourId).then(function(response){
       $scope.guideTour= response.data.result.records[0];
-      console.log($scope.guideTour);
     });
 
 

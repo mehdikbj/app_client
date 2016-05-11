@@ -227,8 +227,9 @@ angular.module('starter.services')
 
 
 angular.module('starter.services')
-  .factory('CkanHttp', function ($http) {
+  .factory('CkanHttp', function ($http, $ionicLoading) {
 
+    var loadingCounter = 0;
 
     var service = {
       get: function (url) {
@@ -238,8 +239,15 @@ angular.module('starter.services')
         if(window.cordova){
           prefixApi = 'http://ckan-demo.ckan.io';
         }
+        $ionicLoading.show();
+        loadingCounter += 1;
 
-        return $http.get( prefixApi + url);
+        return $http.get( prefixApi + url).success(function(){
+          loadingCounter -= 1;
+          if(loadingCounter == 0){
+            $ionicLoading.hide();
+          }
+        });
       }
 
     };

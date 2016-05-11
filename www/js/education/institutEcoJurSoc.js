@@ -1,16 +1,13 @@
 angular.module('starter.institutEcoJurSocController', [])
 
-  .controller('institutEcoJurSocCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('institutEcoJurSocCtrl', function($scope, $http, SearchService) {
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allInstitutEcoJurSoc = [];
-      $ionicLoading.show();
 
       SearchService.searchInstitutEcoJurSoc(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var institutEcoJurSoc = {
@@ -25,9 +22,7 @@ angular.module('starter.institutEcoJurSocController', [])
           };
 
           allInstitutEcoJurSoc.push(institutEcoJurSoc);
-          // console.log(allInstitutEcoJurSoc);
         }
-        $ionicLoading.hide();
         $scope.institutEcoJurSocs = allInstitutEcoJurSoc;
 
 
@@ -55,7 +50,6 @@ angular.module('starter.institutEcoJurSocController', [])
 
     SearchService.getInstitutEcoJurSocById($stateParams.institutEcoJurSocId).then(function(response){
       $scope.institutEcoJurSoc= response.data.result.records[0];
-      console.log($stateParams.institutEcoJurSocId);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -70,7 +64,6 @@ angular.module('starter.institutEcoJurSocController', [])
         map = $scope.mapConfig.control.getGMap();
         var GMapService = new google.maps.places.PlacesService(map);
 
-        // console.log($scope.university.Nom);
         $scope.allMarkerInstitutEcoJurSoc =  allMarkerInstitutEcoJurSoc;
 
         var request = {
@@ -90,8 +83,7 @@ angular.module('starter.institutEcoJurSocController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerInstitutEcoJurSoc.push(marker);
-          // console.log(allMarkerUniversity);
-          // console.log(request);
+          
 
         })
         });

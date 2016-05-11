@@ -1,13 +1,11 @@
 angular.module('starter.ecolePrimController', [])
 
-  .controller('ecolePrimCtrl', function($scope, $http, SearchService,$ionicLoading) {
+  .controller('ecolePrimCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allEcolePrims = [];
-      $ionicLoading.show();
 
       SearchService.searchEcolePrim(searchTxt).then(function(response){
 
@@ -27,7 +25,6 @@ angular.module('starter.ecolePrimController', [])
 
           allEcolePrims.push(ecolePrim);
         }
-        $ionicLoading.hide();
         $scope.allEcolePrims = allEcolePrims;
 
       });
@@ -55,7 +52,6 @@ angular.module('starter.ecolePrimController', [])
 
     SearchService.getEcolePrimById($stateParams.ecolePrimId).then(function(response){
       $scope.ecolePrim= response.data.result.records[0];
-      console.log($scope.ecolePrim);
     });
 
     $scope.$on("$ionicView.enter", function(event, data){
@@ -78,7 +74,6 @@ angular.module('starter.ecolePrimController', [])
           radius: '500',
           query: findInMap
         };
-        console.log('ici');
 
 
         GMapService.textSearch(request, function (results, status){
@@ -93,7 +88,6 @@ angular.module('starter.ecolePrimController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerEcolePrim.push(marker);
-          console.log(allMarkerEcolePrim);
 
         })
         });

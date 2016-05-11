@@ -1,18 +1,15 @@
 angular.module('starter.teleServiceController', [])
 
-  .controller('teleServiceCtrl', function($scope, $http, SearchService, $ionicLoading) {
+  .controller('teleServiceCtrl', function($scope, $http, SearchService) {
     $scope.searchTxt='';
 
 
     $scope.doSearch= function (searchTxt) {
-      console.log(searchTxt);
       var allTeleService = [];
-      $ionicLoading.show();
 
       SearchService.searchTeleService(searchTxt).then(function (response) {
 
         data = response.data.result.records;
-        // console.log(data);
 
         for (var i = 0; i < data.length; i++) {
           var teleService = {
@@ -30,7 +27,6 @@ angular.module('starter.teleServiceController', [])
 
           allTeleService.push(teleService);
         }
-        $ionicLoading.hide();
         $scope.teleServices = allTeleService;
 
       });
