@@ -3,20 +3,12 @@
 
   <ion-content>
 
-    <ion-list>
-      <ion-item ng-repeat="item in societeListe"  item="item" href="#/app/societe/{{item.goTo}}" class="item-remove-animate item-text-wrap">
-
-        <h2>
-          <i class="icon ion-ios-people"></i>
-          {{item.name}}
-
-        </h2>
-
-      </ion-item>
-    </ion-list>
-
-
-
+    <div class="list">
+      <a ng-repeat="item in societeListe"  item="item" href="#/app/societe/{{item.goTo}}" class="item item-icon-left item-text-wrap">
+        <i class="icon"><img src="img/administration.png"></i>
+        <h2>{{item.name}}</h2>
+      </a>
+    </div>
   </ion-content>
 
 

@@ -3,20 +3,13 @@
 
   <ion-content>
 
-    <ion-list>
-      <ion-item ng-repeat="item in tourismeListe"  item="item" href="#/app/tourisme/{{item.goTo}}" class="item-remove-animate item-text-wrap">
-
-        <h2>
-          <i class="icon ion-plane"></i>
-          {{item.name}}
-
-        </h2>
+    <div class="list">
+      <ion-item ng-repeat="item in tourismeListe"  item="item" href="#/app/tourisme/{{item.goTo}}" class="item item-icon-left item-text-wrap">
+        <i class="icon "><img src="img/voyage.png"></i>
+        <h2>{{item.name}}</h2>
 
       </ion-item>
-    </ion-list>
-
-
-
+    </div>
   </ion-content>
 
 

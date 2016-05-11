@@ -11,13 +11,13 @@
       </button>
     </div>
 
-    <ion-list>
-      <ion-item ng-repeat="agenceVoy in agenceVoys"  item="agenceVoy" href="#/app/tourisme/detailAgenceVoy/{{ agenceVoy._id }}" class="item-remove-animate item-text-wrap">
-        <h3>{{ agenceVoy._id }}-
-          {{ agenceVoy.Nom }}</h3>
+    <div class="list">
+      <a ng-repeat="agenceVoy in agenceVoys"  class="item item-icon-left item-text-wrap" item="agenceVoy" href="#/app/tourisme/detailAgenceVoy/{{ agenceVoy._id }}">
+        <i class="icon"><img src="img/tourism.png"></i>
+        <h3>{{ agenceVoy.Nom }}</h3>
         <p>{{ agenceVoy.Ville }} </p>
-      </ion-item>
-    </ion-list>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>
