@@ -12,10 +12,10 @@
     </div>
 
     <ion-list>
-      <ion-item ng-repeat="expert in experts"  item="expert" href="#/app/RD/detailExpert/{{ expert._id }}" class="item-remove-animate item-text-wrap">
-        <h3>{{ expert._id }}-
-          {{ expert.Nom }} </h3>
-        <p>{{ expert.specialite}} </p>
+      <ion-item ng-repeat="expert in experts"  class="item item-icon-left item-text-wrap" item="expert" href="#/app/RD/detailExpert/{{ expert._id }}">
+        <i class="icon"> <img src="img/scientist.png"></i>
+        <h3>{{ expert.Nom }} </h3>
+        <h3>{{ expert.specialite}} </h3>
       </ion-item>
     </ion-list>
 

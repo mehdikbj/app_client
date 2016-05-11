@@ -5,31 +5,33 @@
     <div class="list card">
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-ios-medkit"></i>
-        <h3>CNOPS: {{ dispMed["Code CNOPS"] }}</h3>
+        <i class="icon"><img src="img/sante.png"></i>
+        <h3>{{ dispMed["libellé complet"]}}</h3>
       </a>
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-ios-telephone"></i>
-        ANAM: {{ dispMed["code ANAM"] }} {{ dispMed.UNITE_DOSAGE1}}
-      </a>
-
-      <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-ios-medical"></i>
-        <p>{{ dispMed["libellé complet"]}}</p>
-      </a>
-
-      <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-social-usd"></i>
+        <i class="icon"><img src="img/money1.png"></i>
         <h3>{{ dispMed["Tarif National de Référence"]}} DH</h3>
       </a>
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-information-circled"></i>
-        <p>Prescription médicale du dispositif en  </p>
-        <p>précisant la quantité + devis d'achat </p>
-        <p>ou facture.</p>
+        <i class="icon"><img src="img/information.png"></i>
+        <H3>Prescription médicale du dispositif en  </H3>
+        <h3>précisant la quantité + devis d'achat </h3>
+        <h3>ou facture.</h3>
       </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon"><img src="img/tag1.png"></i>
+        <h3>CNOPS: {{ dispMed["Code CNOPS"] }}</h3>
+      </a>
+
+      <a href="#" class="item item-icon-left item-text-wrap">
+        <i class="icon"><img src="img/tag2.png"></i>
+        ANAM: {{ dispMed["code ANAM"] }} {{ dispMed.UNITE_DOSAGE1}}
+      </a>
+
+
 
     </div>
 

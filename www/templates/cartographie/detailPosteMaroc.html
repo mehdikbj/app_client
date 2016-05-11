@@ -4,29 +4,22 @@
     <div class="list card">
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-home"></i>
+        <i class="icon"> <img src="img/school.png"></i>
         <h3>{{ posteMaroc.CODE_MECANO }}</h3>
-        <p>{{ posteMaroc.RESEAU }} </p>
+        <h3>{{ posteMaroc.RESEAU }} </h3>
       </a>
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-ios-telephone"></i>
-        {{ posteMaroc.COMMUNE }}
+        <i class="icon"> <img src="img/city.png"></i>
+        <h3>Commune: {{ posteMaroc.COMMUNE }}</h3>
+        <h3>Province: {{ posteMaroc.PROVINCE }}</h3>
+        <h3>Ville: {{ posteMaroc.NOM_REGION }}</h3>
+
       </a>
 
       <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-ios-printer"></i>
-        {{ posteMaroc.PROVINCE }}
-      </a>
-
-      <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-at"></i>
-        {{ posteMaroc.NOM_REGION }}
-      </a>
-
-      <a href="#" class="item item-icon-left item-text-wrap">
-        <i class="icon ion-at"></i>
-        {{ posteMaroc.ADRESSE }}
+        <i class="icon"> <img src="img/address.png"></i>
+        <h3>{{ posteMaroc.ADRESSE }}</h3>
       </a>
 
     </div>

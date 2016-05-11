@@ -12,9 +12,9 @@
     </div>
 
     <ion-list>
-      <ion-item ng-repeat="guideTour in guideTours"  item="guideTour" href="#/app/tourisme/detailGuideTour/{{ guideTour._id }}" class="item-remove-animate item-text-wrap">
-        <h3>{{ guideTour._id }}-
-          {{ guideTour.Nom }} {{ guideTour['Prénom'] }} </h3>
+      <ion-item ng-repeat="guideTour in guideTours" class="item item-icon-left item-text-wrap"  item="guideTour" href="#/app/tourisme/detailGuideTour/{{ guideTour._id }}">
+        <i class="icon"><img src="img/businessman.png"></i>
+        <h3>{{ guideTour.Nom }} {{ guideTour['Prénom'] }} </h3>
         <p>{{ guideTour.Ville }} </p>
       </ion-item>
     </ion-list>
