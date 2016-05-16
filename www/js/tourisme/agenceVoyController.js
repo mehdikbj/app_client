@@ -16,8 +16,9 @@ angular.module('starter.agenceVoyController', [])
             _id: data[i]._id,
             Adresse: data[i].Adresse,
             Nom: data[i]['Raison Sociale'],
-            Année: data[i]['Année'],
+            Annee: data[i]['Année'],
             Coordonnées: data[i]['Coordonnées'],
+            agre: data[i]['"Agréments"'],
             Ville: data[i].Ville
 
           };
@@ -91,7 +92,7 @@ angular.module('starter.agenceVoyController', [])
           $scope.mapConfig.center.latitude = results[0].geometry.location.lat();
           $scope.mapConfig.center.longitude = results[0].geometry.location.lng();
           allMarkerAgenceVoy.push(marker);
-          
+
 
         })
         });
