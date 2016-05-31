@@ -13,10 +13,15 @@ angular.module('starter.cartographieController', [])
         name: "Codes postaux des quartiers",
         goTo: "codPosQua"
       },
-      
+
       {
         name: "Liste des agences de Poste Maroc avec coordonnées spatiales",
         goTo: "posteMaroc"
+      },
+
+      {
+        name: "Liste des agences de Poste Maroc sur carte",
+        goTo: "carte"
       }
 
     ];

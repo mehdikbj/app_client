@@ -1,0 +1,24 @@
+<ion-view view-title="Poste Maroc">
+
+  <ion-content>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper" name="ecole">
+        <input ng-model= "searchTxt"  type="text" placeholder="Search">
+      </label>
+      <button  class="button button-small" ng-click="doSearch(searchTxt)">
+        Submit
+      </button>
+    </div>
+
+
+
+      <ui-gmap-google-map center='maps.center' zoom='maps.zoom'>
+        <ui-gmap-marker ng-repeat="m in myMarkers" coords="m.coord"  idkey="m.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
+
+
+  </ion-content>
+
+
+</ion-view>
