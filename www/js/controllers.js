@@ -1,6 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout,  $ionicSideMenuDelegate) {
+  $scope.openMenu = function () {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+
 })
 
 .controller('agencesCtrl', function($scope, $http, SearchService) {

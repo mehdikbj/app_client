@@ -11,8 +11,6 @@ angular.module('starter.carteController', [])
         console.log(data);
         $scope.maps = { center: { latitude: response.data.result.records[0].XY, longitude: response.data.result.records[0].XX }, zoom: 10};
         $scope.myMarkers = allMarker;
-        console.log($scope.myMarkers);
-
         for(var i=0 ;i<data.length ;i++){
           var marker = {
             id: data[i]._id,
